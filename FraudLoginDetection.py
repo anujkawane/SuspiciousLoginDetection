@@ -7,6 +7,7 @@ conf = {'bootstrap.servers': KAFKA_HOST,
         'auto.offset.reset': 'smallest'}
 
 TOPIC_SERVER_LOGS = 'server_logs'
+TOPIC_ALERTS = 'alerts'
 
 consumer = Consumer(conf)
 producer = Producer(conf)
@@ -24,6 +25,8 @@ input_features=['TX_AMOUNT','TX_DURING_WEEKEND', 'TX_DURING_NIGHT', 'CUSTOMER_ID
        'TERMINAL_ID_RISK_7DAY_WINDOW', 'TERMINAL_ID_NB_TX_30DAY_WINDOW',
        'TERMINAL_ID_RISK_30DAY_WINDOW']
 
+
+
 def msg_process(msg):
     message = msg.value()
     # message = json.loads(message)
@@ -33,10 +36,11 @@ def msg_process(msg):
     # else:
     #     messageToSend = {'request_id': message['request_id'], 'fraud': 'False'}
 
-    # producer.produce(TOPIC_PREDICTION, json.dumps(messageToSend).encode('utf-8'), callback=acked)
-    # producer.flush()
-
     print(message)
+
+
+    producer.produce(TOPIC_ALERTS,message, callback=acked)
+    producer.flush()
 
 def consume_loop(consumer, topics):
     try:
