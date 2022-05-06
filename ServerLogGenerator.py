@@ -41,6 +41,8 @@ def acked(err, msg):
 
 def start_producing():
     producer = Producer(conf)
+    df = ps.read_csv('/Users/shriraj/Desktop/FruadLoginDetection-main/geoip2-ipv4_csv.csv')
+    df.dropna()
 
     # generate dtaftame for csv push
     for i in range(20):
