@@ -6,7 +6,7 @@ import json
 KAFKA_HOST = '0.0.0.0:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
-        'group.id': "foo",
+        'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}
 
 TOPIC_SERVER_LOGS = 'server_logs'
@@ -22,7 +22,7 @@ def start_producing():
     for i in range(20):
         message_id = str(uuid.uuid4())
 
-        producer.produce(TOPIC_SERVER_LOGS, json.dumps(i).encode('utf-8'), callback=acked)
+        producer.produce(TOPIC_SERVER_LOGS, json.dumps(i+10).encode('utf-8'), callback=acked)
         producer.flush()
 
         print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(message_id))
