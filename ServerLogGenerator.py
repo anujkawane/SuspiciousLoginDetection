@@ -1,6 +1,8 @@
 from confluent_kafka import Producer, Consumer, KafkaError, KafkaException
-import socket, uuid, json, random, time, pyspark.pandas as ps
+import socket, uuid, json, random, time, os, pyspark.pandas as ps
 from ServerLogEnum import ServerLogEnum
+
+PATH = os.getcwd()+ '/DataFiles/geoip2-ipv4_csv.csv'
 
 KAFKA_HOST = '0.0.0.0:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
@@ -41,7 +43,7 @@ def acked(err, msg):
 
 def start_producing():
     producer = Producer(conf)
-    df = ps.read_csv('/Users/shriraj/Desktop/FruadLoginDetection-main/geoip2-ipv4_csv.csv')
+    df = ps.read_csv(PATH)
     df.dropna()
 
     # generate dtaftame for csv push
