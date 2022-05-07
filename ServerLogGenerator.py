@@ -7,9 +7,8 @@ PATH = os.getcwd()+ '/DataFiles/geoip2-ipv4_csv.csv'
 KAFKA_HOST = '0.0.0.0:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
-        'group.id': "foo",
+        'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}
-
 
 # random = ''
 country = ["USA", "IN", "UK", "CA", "AU", "DE", "ES", "FR", "NL", "SG", "RU", "JP", "BR", "CN", "O"]
@@ -22,12 +21,6 @@ def getServerLog():
                               str(eventType[random.randint(0, len(eventType)-1)]),
                               str(random.randint(10000,99999)))
 
-    eventId = str(uuid.uuid4())
-    timestamp = str(time.time())
-    currentCountry  = str(country[random.randint(0, len(country)-1)])
-    currentEventType = str(eventType[random.randint(0, len(eventType)-1)])
-    accountId = str(random.randint(10000,99999))
-
     print(serverObj.returnCommaSeparated)
     return serverObj.returnCommaSeparated()
 
@@ -39,7 +32,8 @@ def acked(err, msg):
     if err is not None:
         print("Failed to deliver message: %s: %s" % (str(msg), str(err)))
     else:
-        print("Message produced: %s" % (str(msg)))
+        print()
+        # print("Message produced: %s" % (str(msg)))
 
 def start_producing():
     producer = Producer(conf)
@@ -47,7 +41,7 @@ def start_producing():
     df.dropna()
 
     # generate dtaftame for csv push
-    for i in range(20):
+    for i in range(5):
 
         data = getServerLog()
         # print(data)
@@ -56,6 +50,7 @@ def start_producing():
         # type(data)
 
         # push to df
+        print(data)
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)
         producer.flush()
 
@@ -69,22 +64,3 @@ def start_producing():
 if __name__ == '__main__':
     start_producing()
 
-
-
-"""
-1. Device type checking
-2. IP address + Location checking
-3. Time stamp checking
-4. User ID 
-
-CSV File = 
-UserID
-Timestamp
-Device Type
-IP Address
-Location
-
-IP Address + Location = spark dataframe - read it from there csv
-TO generate = UserId, timestamp, device type
-exit(
-"""

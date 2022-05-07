@@ -1,25 +1,10 @@
-import sys
+import sys, socket, uuid, json, random, time, os, pyspark.pandas as ps
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
 from pyspark.sql import SparkSession
 
-# Spark session & context
-from pyspark.streaming import StreamingContext
-
-spark = (SparkSession
-         .builder
-         .master('local')
-         .appName('FraudLoginDetection')
-         # Add kafka package
-         .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.1")
-         .getOrCreate())
-
-sc = spark.sparkContext
-
-ssc = StreamingContext(sc, 2)
-
 KAFKA_HOST = '0.0.0.0:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
-        'group.id': "foo",
+        'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}
 
 TOPIC_SERVER_LOGS = 'server_logs'
@@ -31,31 +16,11 @@ producer = Producer(conf)
 running = True
 MIN_COMMIT_COUNT = 20
 
-df = (spark.readStream.format("kafka").option("kafka.bootstrap.servers", "0.0.0.0:29092") # kafka server
-  .option("subscribe", "server_logs") # topic
-  .option("startingOffsets", "earliest") # start from beginning
-  .load())
-#
-# from pyspark.sql.types import StringType
-#
-# # Convert binary to string key and value
-# df1 = (df
-#     .withColumn("key", df["key"].cast(StringType()))
-#     .withColumn("value", df["value"].cast(StringType())))
-#
-# print(df1['value'])
-
-
 def msg_process(msg):
     message = msg.value()
-    # message = json.loads(message)
-    # prediction = predict(trained_model, message)[0]
-    # if(prediction == 1):
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'True'}
-    # else:
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'False'}
+    message = json.loads(message)
 
-    print(message)
+    list = str(message)
 
     if "10" in str(message):
         producer.produce(TOPIC_ALERTS,message, callback=acked)
@@ -92,9 +57,29 @@ def acked(err, msg):
     else:
         print("Message produced: %s" % (str(msg)))
 
-# def predict(model, msg):
-#     msg = pd.json_normalize(msg['data'])
-#     return model.predict((msg[input_features]))
-
 if __name__ == '__main__':
         consume_loop(consumer, [TOPIC_SERVER_LOGS])
+
+
+
+# spark = (SparkSession
+#          .builder
+#          .master('local')
+#          .appName('FraudLoginDetection')
+#          # Add kafka package
+#          .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.1")
+#          .getOrCreate())
+#
+# sc = spark.sparkContext(appName="FraudLoginDetection")
+# sc.setLogLevel("WARN")
+# ssc = StreamingContext(sc, 2)
+
+#
+# df = (spark.readStream.format("kafka").option("kafka.bootstrap.servers", "0.0.0.0:29092") # kafka server
+#   .option("subscribe", "server_logs") # topic
+#   .option("startingOffsets", "earliest") # start from beginning
+#   .load())
+
+# df.printSchema()
+# messages = df.selectExpr("CAST(value AS STRING)")
+# messages

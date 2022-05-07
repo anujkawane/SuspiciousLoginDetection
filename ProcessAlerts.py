@@ -14,13 +14,6 @@ running = True
 
 def msg_process(msg):
     message = msg.value()
-    # message = json.loads(message)
-    # prediction = predict(trained_model, message)[0]
-    # if(prediction == 1):
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'True'}
-    # else:
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'False'}
-
     print(message)
 
 def consume_loop(consumer, topics):
