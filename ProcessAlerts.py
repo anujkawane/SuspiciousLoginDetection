@@ -39,8 +39,6 @@ def consume_loop(consumer, topics):
             else:
                 msg_process(msg)
                 msg_count += 1
-                if msg_count % MIN_COMMIT_COUNT == 0:
-                    consumer.commit(asynchronous=True)
     finally:
         # Close down consumer to commit final offsets.
         consumer.close()

@@ -42,7 +42,7 @@ def acked(err, msg):
 
 def start_producing():
     producer = Producer(conf)
-    for i in range(1):
+    for i in range(5):
         data = getServerLog()
         print(data)
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)

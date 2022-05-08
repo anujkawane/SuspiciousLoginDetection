@@ -31,12 +31,14 @@ df = spark \
 PANDA = ps.DataFrame({'USER_ID': ['91669', '35004', '83542', '95642'],
         'LOCATION': ['INDIA', 'USA', 'USA', 'INDIA'],
         'DEVICE_TYPE': ['ANDROID', 'ANDROID', 'ANDROID', 'ANDROID'],
-        'TIMESTAMP': ['1651963313','1651897851', '1651897852', '1651897853'],
+        'TIMESTAMP': ['1651970897','1651897851', '1651897852', '1651897853'],
         })
 
 geoLocationMap = ps.DataFrame({'IP': ['1', '2', '3', '4'],
         'LOCATION': ['USA', 'USA', 'USA', 'INDIA']
         })
+
+producer = Producer(conf)
 
 def updateTimeStamp(user_details,current_logged_time):
     global PANDA
@@ -63,7 +65,6 @@ def acked(err, msg):
         print("Message produced: %s" % (str(msg)))
 
 def processData(request):
-    producer = Producer(conf)
     list = request.split(",")
     user_login = PANDA[PANDA['USER_ID'].str.contains(list[-1])]
     if len(user_login) > 0:
@@ -79,12 +80,23 @@ def processData(request):
                     updateTimeStamp(user_login, current_logged_time)
                     print("Valid Login within timestamp -> ", request)
                 else:
-                    producer.produce(TOPIC_ALERTS, json.dumps("New Device Sign-in On Your Account",request).encode('utf-8'), callback=acked)
+                    # produceToAlerts("New Device Sign-in On Your Account",request)
+                    produceToAlerts(request)
             else:
-                producer.produce(TOPIC_ALERTS, json.dumps("Sign-in On Your Account from different Location",request).encode('utf-8'), callback=acked)
+                produceToAlerts(request)
+                # produceToAlerts("Sign-in On Your Account from ",current_logged_location, "METADATA ->",request)
         else:
             updateTimeStamp(user_login, current_logged_time)
             print("Valid Login after timestamp-> ", request)
+
+
+def produceToAlerts(message):
+    producer.produce(TOPIC_ALERTS, json.dumps(message).encode('utf-8'), callback=acked)
+    producer.flush()
+    print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(message))
+    producer.poll(1)
+
+
 
 def readData(batch_df, batch_id):
     if batch_df.toPandas()['value'].size > 0:
