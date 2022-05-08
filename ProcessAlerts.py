@@ -4,15 +4,20 @@ import joblib
 import sys
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
 import json
-import pandas as pd
+
 
 KAFKA_HOST = 'localhost:29092'
+TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
+
 conf = {'bootstrap.servers': KAFKA_HOST,
-        'group.id': "foo",
+        'client.id': socket.gethostname(),
+        'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}
 
 consumer = Consumer(conf)
+
+
 running = True
 
 def msg_process(msg):
@@ -38,10 +43,15 @@ def consume_loop(consumer, topics):
                     raise KafkaException(msg.error())
             else:
                 msg_process(msg)
-                msg_count += 1
     finally:
         # Close down consumer to commit final offsets.
         consumer.close()
+
+def acked(err, msg):
+    if err is not None:
+        print("Failed to deliver message: %s: %s" % (str(msg), str(err)))
+    else:
+        print("Message produced: %s" % (str(msg)))
 
 if __name__ == '__main__':
         consume_loop(consumer, [TOPIC_ALERTS])
