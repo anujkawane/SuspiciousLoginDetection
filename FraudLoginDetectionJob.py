@@ -2,7 +2,7 @@ import sys, socket, uuid, json, random, time, os, pyspark.pandas as ps
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
 from pyspark.sql import SparkSession
 
-KAFKA_HOST = '0.0.0.0:29092'
+KAFKA_HOST = 'localhost:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}

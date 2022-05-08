@@ -1,22 +1,18 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import *
-from pyspark.sql.types import StructType, LongType
 from pyspark.ml.feature import Normalizer, StandardScaler
-import random
-import sys, socket, uuid, json, random, time, os, pyspark.pandas as ps
+import sys, socket, json, time, pyspark.pandas as ps
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
-from pyspark.sql import functions as F
+# from pyspark.sql import functions as F
 import time
 
-KAFKA_HOST = '0.0.0.0:29092'
-conf = {'bootstrap.servers': KAFKA_HOST,
-        'group.id': "FraudLoginDetection",
-        'auto.offset.reset': 'smallest'}
-
+KAFKA_HOST = 'localhost:29092'
 TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
-kafka_topic_name = "server_logs"
-kafka_bootstrap_servers = '0.0.0.0:29092'
+
+conf = {'bootstrap.servers': KAFKA_HOST,
+        'client.id': socket.gethostname(),
+        'group.id': "FraudLoginDetection",
+        'auto.offset.reset': 'smallest'}
 
 spark = (SparkSession
          .builder
@@ -28,36 +24,71 @@ spark = (SparkSession
 df = spark \
   .readStream \
   .format("kafka") \
-  .option("kafka.bootstrap.servers", kafka_bootstrap_servers) \
-  .option("subscribe", kafka_topic_name) \
+  .option("kafka.bootstrap.servers", KAFKA_HOST) \
+  .option("subscribe", TOPIC_SERVER_LOGS) \
   .load()
 
+PANDA = ps.DataFrame({'USER_ID': ['91669', '35004', '83542', '95642'],
+        'LOCATION': ['INDIA', 'USA', 'USA', 'INDIA'],
+        'DEVICE_TYPE': ['ANDROID', 'ANDROID', 'ANDROID', 'ANDROID'],
+        'TIMESTAMP': ['1651963313','1651897851', '1651897852', '1651897853'],
+        })
 
-df = df.selectExpr("CAST(value AS STRING)", "timestamp")
-print(type(df))
-# df2 = df.select("key", df.struct(
-#         df.value[0].alias("value1"),
-#         df.value[1].alias("value2"),
-#         df.value[2].alias("value3"),
-#         df.value[3].alias("value4"),
-#         df.value[4].alias("value5")
-#     ).alias("value"))
+geoLocationMap = ps.DataFrame({'IP': ['1', '2', '3', '4'],
+        'LOCATION': ['USA', 'USA', 'USA', 'INDIA']
+        })
 
-loginData_schema = StructType() \
-        .add("UUID", StringType())\
-            .add("Time", LongType())\
-                .add("Country", StringType())\
-                    .add("EventType", StringType())\
-                        .add("AccountID", StringType())
+def updateTimeStamp(user_details,current_logged_time):
+    global PANDA
+    PANDA = PANDA[PANDA['USER_ID'] != user_details['USER_ID'].to_list()[0] ]
+    user_details = user_details.iloc[0,:].to_list()
+    user_details[-1]  = str(current_logged_time)
+    # user_details = ps.Series(user_details)
+    user_details = ps.DataFrame({'USER_ID': [user_details[0]],
+                  'LOCATION': [user_details[1]],
+                  'DEVICE_TYPE': [user_details[2]],
+                  'TIMESTAMP': [user_details[3]],
+                  })
+    PANDA = PANDA.append(user_details,ignore_index= True)
 
-transaction_detail_df2 = df.select(explode(split(df.value, ',')).alias('transaction_detail'))
+def getLocationFromIP(ip_address):
+    locationIp = geoLocationMap[geoLocationMap['IP'] == 1]
+    location = str(locationIp['LOCATION'].values[0])
+    return location
 
-df = df.select(explode(split(df.value, ',')).alias('transaction_detail'))
+def acked(err, msg):
+    if err is not None:
+        print("Failed to deliver message: %s: %s" % (str(msg), str(err)))
+    else:
+        print("Message produced: %s" % (str(msg)))
 
-posts_stream = df.writeStream.trigger(processingTime='1 seconds')\
-        .outputMode('Append')\
-            .option("truncate", "false")\
-                .format("console")\
-                    .start()
+def processData(request):
+    producer = Producer(conf)
+    list = request.split(",")
+    user_login = PANDA[PANDA['USER_ID'].str.contains(list[-1])]
+    if len(user_login) > 0:
+        last_logged_time = int(user_login['TIMESTAMP'].values[0])
+        current_logged_time = int(time.time())
+        if current_logged_time - last_logged_time < 10 * 60:
+            last_location = user_login['LOCATION'].values[0]
+            current_logged_location = getLocationFromIP('1')
+            if last_location == current_logged_location:
+                last_Logged_device = user_login['DEVICE_TYPE'].values[0]
+                current_logged_device = "Android"
+                if last_Logged_device == current_logged_device:
+                    updateTimeStamp(user_login, current_logged_time)
+                    print("Valid Login within timestamp -> ", request)
+                else:
+                    producer.produce(TOPIC_ALERTS, json.dumps("New Device Sign-in On Your Account",request).encode('utf-8'), callback=acked)
+            else:
+                producer.produce(TOPIC_ALERTS, json.dumps("Sign-in On Your Account from different Location",request).encode('utf-8'), callback=acked)
+        else:
+            updateTimeStamp(user_login, current_logged_time)
+            print("Valid Login after timestamp-> ", request)
 
-posts_stream.awaitTermination()
+def readData(batch_df, batch_id):
+    if batch_df.toPandas()['value'].size > 0:
+        request = json.loads(batch_df.toPandas()['value'][0])
+        processData(request)
+
+posts_stream = df.writeStream.foreachBatch(readData).start().awaitTermination()
