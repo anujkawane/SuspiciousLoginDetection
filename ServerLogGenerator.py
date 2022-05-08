@@ -17,12 +17,6 @@ deviceType = ["ANDROID","ANDROID","ANDROID"]
 user_id = ['91669', '35004', '83542', '95642']
 
 def getServerLog():
-    # serverObj = ServerLogEnum(str(uuid.uuid4()),
-    #                           str(int(time.time())),
-    #                           str(ipv4[random.randint(0, len(ipv4)-1)]),
-    #                           str(deviceType[random.randint(0, len(deviceType)-1)]),
-    #                           str(user_id[random.randint(0, len(user_id)-1)]))
-
     serverObj = ServerLogEnum(str(uuid.uuid4()),
                               str(int(time.time())),
                               str(4),
@@ -37,21 +31,16 @@ def acked(err, msg):
     if err is not None:
         print("Failed to deliver message: %s: %s" % (str(msg), str(err)))
     else:
-        print()
         print("Message produced: %s" % (str(msg)))
 
-def start_producing():
+def produce():
     producer = Producer(conf)
     for i in range(1):
         data = getServerLog()
-        print(data)
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)
         producer.flush()
-
-        # print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
+        print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
         producer.poll(1)
 
-    # Push to CSV
-
 if __name__ == '__main__':
-    start_producing()
+    produce()

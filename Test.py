@@ -69,7 +69,8 @@ def acked(err, msg):
         print("Message produced: %s" % (str(msg)))
 
 def processData(request):
-    list = request.split(",")
+    print(request)
+    list = request['value'].split(",")
     print(list)
     UUID = list[0]
     TIME = list[1]
@@ -97,6 +98,20 @@ def processData(request):
         else:
             updateTimeStamp(user_login, current_logged_time)
             print("Valid Login after timestamp-> ", request)
+        return '1'
+
+def convert_string_to_json(row) :
+    request = json.loads(row)
+    data = request['data']
+    data['request_id'] = request['request_id']
+    return data
+
+def create_df(batch_df) :
+    value_series = batch_df['value'].to_list()
+    value_list = []
+    for value in value_series :
+        value_list.append({"value" : json.loads(value)})
+    return ps.DataFrame(value_list)
 
 
 def produceToAlerts(message):
@@ -108,8 +123,9 @@ def produceToAlerts(message):
 
 
 def readData(batch_df, batch_id):
-    if batch_df.toPandas()['value'].size > 0:
-        request = json.loads(batch_df.toPandas()['value'][0])
-        processData(request)
+    batch = batch_df.to_pandas_on_spark()
+    if batch['value'].size > 0:
+        input_df = create_df(batch)
+        input_df.apply(processData,axis =1)
 
 posts_stream = df.writeStream.foreachBatch(readData).start().awaitTermination()
