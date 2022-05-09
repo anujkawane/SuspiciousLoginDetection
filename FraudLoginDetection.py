@@ -13,8 +13,6 @@ conf = {'bootstrap.servers': KAFKA_HOST,
         'group.id': "FraudLoginDetection",
         'auto.offset.reset': 'smallest'}
 
-# User_Login_History, IPv4_Location_Mapping = readData()
-
 spark = (SparkSession
          .builder
          .master('local')
@@ -54,7 +52,7 @@ def getLocationFromIP(ip_address):
     Country = str(locationIp['Country'].values[0])
     State = str(locationIp['State'].values[0])
     City = str(locationIp['city'].values[0])
-    return City
+    return City, State, Country
 
 def acked(err, msg):
     if err is not None:
@@ -77,19 +75,21 @@ def processData(request):
         current_logged_time = int(TIME)
         if current_logged_time - last_logged_time < 10 * 60:
             last_location = user_login['Location'].values[0]
-            current_logged_location = getLocationFromIP(IPv4)
-            if last_location == current_logged_location:
-                last_Logged_device = user_login['DeviceType'].values
+            current_logged_location= getLocationFromIP(IPv4)
+            if last_location in current_logged_location:
+                last_Logged_device = user_login['DeviceType'].values[0].split(",")
                 current_logged_device = DEVICE_TYPE
                 if current_logged_device in last_Logged_device:
                     updateTimeStamp(user_login, current_logged_time)
-                    print("Valid Login within timestamp -> ", request)
+                    print("Valid Login within timestamp -> ", request.values[0])
                 else:
-                    produceToAlerts(request.values[0])
+                    print("Anuj current", current_logged_device,"\n")
+                    print("Anuj last ", last_Logged_device,"\n")
+                    produceToAlerts(request.values[0]+",DeviceAlert"+","+' '.join(current_logged_location))
             else:
-                produceToAlerts(request.values[0])
+                produceToAlerts(request.values[0]+",SignInAlert"+","+' '.join(current_logged_location))
         else:
-            print("Valid Login after timestamp-> ", request)
+            print("Valid Login after timestamp-> ", request.values[0])
             updateTimeStamp(user_login, current_logged_time)
 
 def convert_string_to_json(row) :
