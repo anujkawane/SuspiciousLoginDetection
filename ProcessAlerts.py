@@ -1,26 +1,28 @@
+import json
+import socket
+import joblib
 import sys
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
+import json
 
-KAFKA_HOST = '0.0.0.0:29092'
-conf = {'bootstrap.servers': KAFKA_HOST,
-        'group.id': "foo",
-        'auto.offset.reset': 'smallest'}
 
+KAFKA_HOST = 'localhost:29092'
+TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
 
+conf = {'bootstrap.servers': KAFKA_HOST,
+        'client.id': socket.gethostname(),
+        'group.id': "FraudLoginDetection",
+        'auto.offset.reset': 'smallest'}
+
 consumer = Consumer(conf)
+
 
 running = True
 
 def msg_process(msg):
     message = msg.value()
-    # message = json.loads(message)
-    # prediction = predict(trained_model, message)[0]
-    # if(prediction == 1):
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'True'}
-    # else:
-    #     messageToSend = {'request_id': message['request_id'], 'fraud': 'False'}
-
+    message = json.loads(message)
     print(message)
 
 def consume_loop(consumer, topics):

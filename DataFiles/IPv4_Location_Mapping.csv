@@ -1,0 +1,966 @@
+IP,Country,State,city
+4.28.144.0,US,California,Anaheim
+4.28.146.160,US,California,Anaheim
+4.59.56.0,US,California,Anaheim
+12.13.168.0,US,California,Anaheim
+12.24.176.0,US,California,Anaheim
+12.34.48.0,US,California,Anaheim
+12.34.54.0,US,California,Anaheim
+12.34.188.0,US,California,Anaheim
+12.86.16.0,US,California,Anaheim
+12.157.8.0,US,California,Anaheim
+5.62.56.253,US,Alaska,Anchorage
+5.62.58.233,US,Alaska,Anchorage
+12.17.176.0,US,Alaska,Anchorage
+12.31.16.0,US,Alaska,Anchorage
+12.146.43.168,US,Alaska,Anchorage
+17.27.24.0,US,Alaska,Anchorage
+23.229.26.224,US,Alaska,Anchorage
+23.229.62.192,US,Alaska,Anchorage
+23.229.90.32,US,Alaska,Anchorage
+23.229.113.0,US,Alaska,Anchorage
+4.14.37.128,US,California,Bakersfield
+4.15.126.0,US,California,Bakersfield
+4.30.148.0,US,California,Bakersfield
+4.79.43.0,US,California,Bakersfield
+8.4.160.0,US,California,Bakersfield
+8.4.164.0,US,California,Bakersfield
+12.11.194.0,US,California,Bakersfield
+12.16.42.0,US,California,Bakersfield
+12.25.174.0,US,California,Bakersfield
+12.25.240.0,US,California,Bakersfield
+4.15.240.0,US,California,Chula Vista
+12.22.240.0,US,California,Chula Vista
+12.162.200.0,US,California,Chula Vista
+12.196.230.168,US,California,Chula Vista
+17.26.192.0,US,California,Chula Vista
+23.113.200.0,US,California,Chula Vista
+23.113.204.0,US,California,Chula Vista
+23.152.129.0,US,California,Chula Vista
+23.162.16.0,US,California,Chula Vista
+45.16.224.0,US,California,Chula Vista
+2.56.6.0,US,Texas,Dallas
+2.56.9.0,US,Texas,Dallas
+2.56.188.0,US,Texas,Dallas
+2.57.16.0,US,Texas,Dallas
+3.91.128.212,US,Texas,Dallas
+3.219.214.78,US,Texas,Dallas
+4.1.17.0,US,Texas,Dallas
+4.14.130.0,US,Texas,Dallas
+4.15.37.0,US,Texas,Dallas
+4.15.224.0,US,Texas,Dallas
+4.7.37.0,US,North Carolina,Greensboro
+4.7.37.128,US,North Carolina,Greensboro
+4.34.21.176,US,North Carolina,Greensboro
+12.126.32.0,US,North Carolina,Greensboro
+12.155.92.120,US,North Carolina,Greensboro
+12.177.72.0,US,North Carolina,Greensboro
+17.19.208.0,US,North Carolina,Greensboro
+23.239.168.128,US,North Carolina,Greensboro
+24.49.5.224,US,North Carolina,Greensboro
+24.88.136.0,US,North Carolina,Greensboro
+12.19.180.0,US,Texas,Laredo
+12.71.181.0,US,Texas,Laredo
+12.94.216.0,US,Texas,Laredo
+12.195.46.0,US,Texas,Laredo
+24.73.244.180,US,Texas,Laredo
+24.73.247.48,US,Texas,Laredo
+24.73.249.20,US,Texas,Laredo
+24.73.250.72,US,Texas,Laredo
+24.153.129.132,US,Texas,Laredo
+24.153.136.128,US,Texas,Laredo
+4.1.65.0,US,Kentucky,Louisville
+4.1.69.0,US,Kentucky,Louisville
+4.2.157.128,US,Kentucky,Louisville
+4.4.110.0,US,Kentucky,Louisville
+4.7.159.0,US,Kentucky,Louisville
+4.7.159.128,US,Kentucky,Louisville
+4.14.161.0,US,Kentucky,Louisville
+4.14.161.48,US,Kentucky,Louisville
+4.14.173.0,US,Kentucky,Louisville
+4.15.100.0,US,Kentucky,Louisville
+4.17.228.0,US,Nevada,North Las Vegas
+12.250.192.0,US,Nevada,North Las Vegas
+24.120.124.0,US,Nevada,North Las Vegas
+24.234.30.0,US,Nevada,North Las Vegas
+24.234.44.0,US,Nevada,North Las Vegas
+24.234.64.0,US,Nevada,North Las Vegas
+24.234.102.192,US,Nevada,North Las Vegas
+24.253.28.0,US,Nevada,North Las Vegas
+24.253.54.0,US,Nevada,North Las Vegas
+24.253.118.0,US,Nevada,North Las Vegas
+4.14.105.64,US,California,Oakland
+4.53.200.0,US,California,Oakland
+8.19.46.0,US,California,Oakland
+12.24.250.0,US,California,Oakland
+12.108.206.0,US,California,Oakland
+12.161.56.0,US,California,Oakland
+12.161.61.0,US,California,Oakland
+12.163.76.0,US,California,Oakland
+12.163.79.120,US,California,Oakland
+12.163.124.0,US,California,Oakland
+5.62.59.24,US,Nebraska,Omaha
+8.46.115.0,US,Nebraska,Omaha
+12.49.224.0,US,Texas,Omaha
+12.108.192.0,US,Nebraska,Omaha
+17.26.136.0,US,Nebraska,Omaha
+23.94.63.0,US,Nebraska,Omaha
+23.152.176.0,US,Nebraska,Omaha
+23.229.26.240,US,Nebraska,Omaha
+23.229.27.192,US,Nebraska,Omaha
+23.229.29.144,US,Nebraska,Omaha
+4.1.146.0,US,Pennsylvania,Philadelphia
+4.7.74.0,US,Pennsylvania,Philadelphia
+4.7.76.0,US,Pennsylvania,Philadelphia
+4.16.122.0,US,Pennsylvania,Philadelphia
+4.16.126.0,US,Pennsylvania,Philadelphia
+4.30.47.0,US,Pennsylvania,Philadelphia
+4.30.186.200,US,Pennsylvania,Philadelphia
+4.30.188.0,US,Pennsylvania,Philadelphia
+4.31.113.15,US,Pennsylvania,Philadelphia
+4.34.195.0,US,Pennsylvania,Philadelphia
+4.1.98.0,US,Arizona,Phoenix
+4.1.100.0,US,Arizona,Phoenix
+4.1.160.0,US,Arizona,Phoenix
+4.1.165.0,US,Arizona,Phoenix
+4.7.245.130,US,Arizona,Phoenix
+4.7.247.0,US,Arizona,Phoenix
+4.14.52.0,US,Arizona,Phoenix
+4.14.64.0,US,Arizona,Phoenix
+4.17.231.32,US,Arizona,Phoenix
+4.28.84.0,US,Arizona,Phoenix
+4.4.96.0,US,North Carolina,Raleigh
+4.7.118.0,US,North Carolina,Raleigh
+4.7.224.0,US,North Carolina,Raleigh
+4.7.252.0,US,North Carolina,Raleigh
+4.14.25.0,US,North Carolina,Raleigh
+4.14.228.0,US,North Carolina,Raleigh
+4.18.201.0,US,North Carolina,Raleigh
+4.34.16.0,US,North Carolina,Raleigh
+4.34.234.72,US,North Carolina,Raleigh
+4.35.192.104,US,North Carolina,Raleigh
+4.1.105.0,US,Texas,San Antonio
+4.4.50.0,US,Texas,San Antonio
+4.14.56.0,US,Texas,San Antonio
+4.16.100.0,US,Texas,San Antonio
+4.16.216.0,US,Texas,San Antonio
+4.17.92.0,US,Texas,San Antonio
+4.49.76.0,US,Texas,San Antonio
+5.175.212.128,US,Texas,San Antonio
+6.46.44.0,US,Texas,San Antonio
+6.46.48.0,US,Texas,San Antonio
+4.1.103.0,US,Arizona,Scottsdale
+4.7.246.0,US,Arizona,Scottsdale
+4.7.246.128,US,Arizona,Scottsdale
+4.14.68.0,US,Arizona,Scottsdale
+4.17.224.0,US,Arizona,Scottsdale
+4.17.232.0,US,Arizona,Scottsdale
+4.28.86.0,US,Arizona,Scottsdale
+4.79.164.0,US,Arizona,Scottsdale
+12.164.142.40,US,Arizona,Scottsdale
+12.226.57.168,US,Arizona,Scottsdale
+3.217.96.119,US,Illinois,Aurora
+4.4.78.128,US,Colorado,Aurora
+4.4.104.0,US,Colorado,Aurora
+4.14.116.0,US,Colorado,Aurora
+4.30.172.0,US,Illinois,Aurora
+4.34.71.192,US,Illinois,Aurora
+8.37.102.33,US,Colorado,Aurora
+8.42.69.64,US,Colorado,Aurora
+8.46.202.0,US,Colorado,Aurora
+8.46.202.112,US,Colorado,Aurora
+4.1.107.128,US,Louisiana,Baton Rouge
+4.4.113.0,US,Louisiana,Baton Rouge
+4.16.220.0,US,Louisiana,Baton Rouge
+4.30.64.0,US,Louisiana,Baton Rouge
+4.30.69.0,US,Louisiana,Baton Rouge
+8.48.251.128,US,Louisiana,Baton Rouge
+12.12.236.0,US,Louisiana,Baton Rouge
+12.97.249.0,US,Louisiana,Baton Rouge
+12.97.253.112,US,Louisiana,Baton Rouge
+12.108.64.0,US,Louisiana,Baton Rouge
+4.4.68.0,US,Arizona,Chandler
+4.4.188.86,US,Arizona,Chandler
+4.34.83.0,US,Arizona,Chandler
+8.44.240.0,US,Arizona,Chandler
+12.28.144.0,US,Arizona,Chandler
+12.28.158.0,US,Arizona,Chandler
+12.105.160.0,US,Arizona,Chandler
+17.24.160.0,US,Arizona,Chandler
+24.31.17.128,US,Texas,Chandler
+24.49.194.0,US,Texas,Chandler
+4.30.32.0,US,Virginia,Chesapeake
+8.5.253.0,US,Virginia,Chesapeake
+12.160.80.0,US,Virginia,Chesapeake
+24.154.46.0,US,Ohio,Chesapeake
+24.154.101.128,US,Ohio,Chesapeake
+24.154.129.0,US,Ohio,Chesapeake
+24.154.132.0,US,Ohio,Chesapeake
+24.154.137.32,US,Ohio,Chesapeake
+24.154.144.0,US,Ohio,Chesapeake
+24.216.28.0,US,Virginia,Chesapeake
+4.59.40.0,US,Ohio,Cleveland
+12.2.188.0,US,Ohio,Cleveland
+12.2.224.0,US,Ohio,Cleveland
+12.2.239.208,US,Ohio,Cleveland
+12.26.112.0,US,Ohio,Cleveland
+12.30.208.0,US,Ohio,Cleveland
+12.31.32.0,US,Ohio,Cleveland
+12.33.192.0,US,Ohio,Cleveland
+12.33.202.0,US,Ohio,Cleveland
+12.33.216.0,US,Ohio,Cleveland
+3.3.28.0,US,Ohio,Columbus
+3.4.24.0,US,Ohio,Columbus
+3.5.128.0,US,Ohio,Columbus
+3.12.0.0,US,Ohio,Columbus
+3.90.93.12,US,Ohio,Columbus
+3.128.0.0,US,Ohio,Columbus
+3.128.168.6,US,Ohio,Columbus
+4.1.64.0,US,Ohio,Columbus
+4.1.64.192,US,Ohio,Columbus
+4.7.194.0,US,Ohio,Columbus
+4.31.124.0,US,Michigan,Detroit
+4.35.105.80,US,Michigan,Detroit
+4.53.76.0,US,Michigan,Detroit
+8.48.133.0,US,Michigan,Detroit
+12.15.0.0,US,Michigan,Detroit
+12.15.16.0,US,Michigan,Detroit
+12.35.146.0,US,Michigan,Detroit
+12.35.147.131,US,Michigan,Detroit
+12.37.230.0,US,Michigan,Detroit
+12.52.136.0,US,Michigan,Detroit
+3.223.57.37,US,Indiana,Indianapolis
+3.226.190.240,US,Indiana,Indianapolis
+4.1.67.0,US,Indiana,Indianapolis
+4.1.70.0,US,Indiana,Indianapolis
+4.2.154.0,US,Indiana,Indianapolis
+4.4.60.0,US,Indiana,Indianapolis
+4.7.155.128,US,Indiana,Indianapolis
+4.14.74.0,US,Indiana,Indianapolis
+4.15.97.0,US,Indiana,Indianapolis
+4.17.83.0,US,Indiana,Indianapolis
+4.15.246.0,US,California,Irvine
+4.16.200.0,US,California,Irvine
+4.30.61.98,US,California,Irvine
+4.34.90.0,US,California,Irvine
+4.53.181.0,US,California,Irvine
+4.71.104.0,US,California,Irvine
+4.71.106.0,US,California,Irvine
+8.7.154.0,US,California,Irvine
+8.37.112.0,US,California,Irvine
+12.1.210.0,US,California,Irvine
+2.56.117.0,US,California,Los Angeles
+2.56.139.0,US,California,Los Angeles
+2.56.172.0,US,California,Los Angeles
+2.56.253.0,US,California,Los Angeles
+2.56.255.0,US,California,Los Angeles
+2.57.151.0,US,California,Los Angeles
+2.57.252.0,US,California,Los Angeles
+2.57.254.0,US,California,Los Angeles
+2.58.72.0,US,California,Los Angeles
+2.58.240.0,US,California,Los Angeles
+4.1.168.0,US,Tennessee,Nashville
+4.1.170.64,US,Tennessee,Nashville
+4.1.170.128,US,Tennessee,Nashville
+4.14.80.0,US,Tennessee,Nashville
+4.14.87.0,US,Tennessee,Nashville
+4.16.116.0,US,Tennessee,Nashville
+4.31.144.128,US,Tennessee,Nashville
+5.62.59.60,US,Tennessee,Nashville
+8.6.146.0,US,Tennessee,Nashville
+8.48.254.112,US,Tennessee,Nashville
+4.30.76.136,US,Oklahoma,Oklahoma City
+5.230.5.16,US,Oklahoma,Oklahoma City
+5.230.5.88,US,Oklahoma,Oklahoma City
+5.230.129.32,US,Oklahoma,Oklahoma City
+5.230.129.104,US,Oklahoma,Oklahoma City
+5.230.129.160,US,Oklahoma,Oklahoma City
+5.230.129.224,US,Oklahoma,Oklahoma City
+8.40.204.0,US,Oklahoma,Oklahoma City
+12.7.96.0,US,Oklahoma,Oklahoma City
+12.8.232.0,US,Oklahoma,Oklahoma City
+4.1.20.0,US,Texas,Plano
+4.7.208.0,US,Texas,Plano
+8.17.224.0,US,Texas,Plano
+8.17.252.0,US,Texas,Plano
+12.13.40.0,US,Texas,Plano
+12.33.32.64,US,Texas,Plano
+12.47.158.224,US,Texas,Plano
+12.50.8.0,US,Texas,Plano
+12.139.56.0,US,Texas,Plano
+12.139.63.0,US,Texas,Plano
+4.1.42.0,US,Oregon,Portland
+4.1.46.0,US,Oregon,Portland
+4.1.192.0,US,Oregon,Portland
+4.1.212.0,US,Oregon,Portland
+4.1.215.32,US,Oregon,Portland
+4.1.215.55,US,Oregon,Portland
+4.15.19.168,US,Oregon,Portland
+4.15.19.238,US,Oregon,Portland
+4.15.128.0,US,Oregon,Portland
+4.16.169.0,US,Oregon,Portland
+4.15.77.208,US,California,Sacramento
+8.45.43.0,US,California,Sacramento
+12.44.204.0,US,California,Sacramento
+12.53.232.192,US,California,Sacramento
+12.71.64.0,US,California,Sacramento
+12.89.144.0,US,California,Sacramento
+12.161.69.120,US,California,Sacramento
+12.172.184.0,US,California,Sacramento
+12.183.160.0,US,California,Sacramento
+12.183.176.0,US,California,Sacramento
+4.14.40.0,US,California,San Diego
+4.16.104.0,US,California,San Diego
+4.16.108.0,US,California,San Diego
+4.30.0.0,US,California,San Diego
+4.35.148.0,US,California,San Diego
+4.53.112.0,US,California,San Diego
+4.53.122.0,US,California,San Diego
+4.53.124.0,US,California,San Diego
+5.231.5.128,US,California,San Diego
+8.4.0.0,US,California,San Diego
+2.57.76.0,US,California,San Francisco
+4.4.36.160,US,California,San Francisco
+4.7.12.0,US,California,San Francisco
+4.15.76.0,US,California,San Francisco
+4.15.77.216,US,California,San Francisco
+4.15.123.160,US,California,San Francisco
+4.16.80.252,US,California,San Francisco
+4.16.85.0,US,California,San Francisco
+4.20.98.64,US,California,San Francisco
+4.28.12.0,US,California,San Francisco
+2.16.33.76,US,Texas,Austin
+4.1.106.128,US,Texas,Austin
+4.2.232.0,US,Texas,Austin
+4.2.235.0,US,Texas,Austin
+4.2.235.72,US,Texas,Austin
+4.4.48.128,US,Texas,Austin
+4.14.137.0,US,Texas,Austin
+4.14.206.0,US,Texas,Austin
+4.15.4.0,US,Texas,Austin
+4.16.232.0,US,Texas,Austin
+2.56.137.0,US,Illinois,Chicago
+2.56.184.0,US,Illinois,Chicago
+2.56.222.0,US,Illinois,Chicago
+2.59.204.0,US,Illinois,Chicago
+3.94.46.0,US,Illinois,Chicago
+4.1.48.0,US,Illinois,Chicago
+4.1.50.0,US,Illinois,Chicago
+4.1.91.64,US,Illinois,Chicago
+4.1.215.54,US,Illinois,Chicago
+4.2.176.0,US,Illinois,Chicago
+4.16.234.0,US,Texas,El Paso
+4.17.231.0,US,Texas,El Paso
+4.18.105.0,US,Texas,El Paso
+8.36.96.0,US,Texas,El Paso
+8.48.251.248,US,Texas,El Paso
+12.5.60.0,US,Texas,El Paso
+12.7.32.0,US,Texas,El Paso
+12.7.36.0,US,Texas,El Paso
+12.19.178.0,US,Texas,El Paso
+12.19.182.0,US,Texas,El Paso
+4.7.204.0,US,Texas,Garland
+8.40.139.0,US,Texas,Garland
+12.7.144.0,US,Texas,Garland
+12.37.56.0,US,Texas,Garland
+17.16.26.128,US,Texas,Garland
+17.16.30.128,US,Texas,Garland
+17.24.48.0,US,Texas,Garland
+24.73.244.188,US,Texas,Garland
+24.73.245.44,US,Texas,Garland
+24.73.247.32,US,Texas,Garland
+4.14.65.0,US,Arizona,Gilbert
+4.17.226.0,US,Arizona,Gilbert
+4.53.109.0,US,Arizona,Gilbert
+8.44.236.0,US,Arizona,Gilbert
+12.226.59.136,US,Arizona,Gilbert
+17.27.48.0,US,Arizona,Gilbert
+24.56.40.0,US,Arizona,Gilbert
+24.56.52.0,US,Arizona,Gilbert
+24.56.60.0,US,Arizona,Gilbert
+24.248.85.128,US,Arizona,Gilbert
+4.7.240.0,US,Arizona,Glendale
+4.15.10.0,US,Arizona,Glendale
+4.26.140.0,US,Arizona,Glendale
+4.34.95.0,US,California,Glendale
+12.10.192.0,US,California,Glendale
+12.10.200.0,US,California,Glendale
+12.33.139.72,US,California,Glendale
+12.155.241.104,US,Wisconsin,Glendale
+12.191.202.8,US,Arizona,Glendale
+12.196.173.232,US,California,Glendale
+12.147.148.0,US,Texas,Lubbock
+12.177.96.0,US,Texas,Lubbock
+12.178.144.0,US,Texas,Lubbock
+12.178.148.0,US,Texas,Lubbock
+12.189.168.0,US,Texas,Lubbock
+12.191.80.0,US,Texas,Lubbock
+12.218.152.0,US,Texas,Lubbock
+12.237.102.0,US,Texas,Lubbock
+23.116.34.0,US,Texas,Lubbock
+23.116.36.0,US,Texas,Lubbock
+4.16.56.0,US,Alabama,Madison
+4.16.62.0,US,Alabama,Madison
+4.16.62.240,US,Alabama,Madison
+6.49.12.0,US,Alabama,Madison
+8.42.176.0,US,Mississippi,Madison
+9.131.124.0,US,Wisconsin,Madison
+12.9.112.0,US,Mississippi,Madison
+12.9.120.0,US,Mississippi,Madison
+12.52.144.0,US,Wisconsin,Madison
+12.111.48.0,US,Connecticut,Madison
+4.4.12.0,US,Tennessee,Memphis
+4.7.129.0,US,Tennessee,Memphis
+4.7.132.0,US,Tennessee,Memphis
+4.14.250.0,US,Tennessee,Memphis
+4.26.8.0,US,Tennessee,Memphis
+4.31.144.0,US,Tennessee,Memphis
+4.31.144.192,US,Tennessee,Memphis
+4.31.146.64,US,Tennessee,Memphis
+4.31.146.128,US,Tennessee,Memphis
+4.35.3.0,US,Tennessee,Memphis
+3.229.86.134,US,Wisconsin,Milwaukee
+4.1.55.0,US,Wisconsin,Milwaukee
+4.1.215.24,US,Wisconsin,Milwaukee
+4.14.167.0,US,Wisconsin,Milwaukee
+4.14.172.0,US,Wisconsin,Milwaukee
+4.15.87.0,US,Wisconsin,Milwaukee
+4.16.32.64,US,Wisconsin,Milwaukee
+4.16.34.0,US,Wisconsin,Milwaukee
+4.16.36.0,US,Wisconsin,Milwaukee
+4.16.212.128,US,Wisconsin,Milwaukee
+4.7.162.0,US,New Jersey,Newark
+4.59.0.0,US,California,Newark
+5.8.41.0,US,New Jersey,Newark
+5.188.0.0,US,New Jersey,Newark
+8.27.65.0,US,New Jersey,Newark
+8.27.69.0,US,New Jersey,Newark
+8.27.75.0,US,New Jersey,Newark
+12.97.80.0,US,California,Newark
+12.151.32.0,US,California,Newark
+12.151.36.0,US,California,Newark
+3.215.94.65,US,Pennsylvania,Pittsburgh
+4.35.235.128,US,Pennsylvania,Pittsburgh
+4.78.16.0,US,Pennsylvania,Pittsburgh
+8.45.46.0,US,Pennsylvania,Pittsburgh
+12.96.115.10,US,Pennsylvania,Pittsburgh
+12.108.126.8,US,Pennsylvania,Pittsburgh
+17.17.192.0,US,Pennsylvania,Pittsburgh
+17.18.128.0,US,Pennsylvania,Pittsburgh
+17.20.112.0,US,Pennsylvania,Pittsburgh
+17.44.176.0,US,Pennsylvania,Pittsburgh
+4.34.128.0,US,Florida,Tampa
+4.34.130.7,US,Florida,Tampa
+4.34.132.0,US,Florida,Tampa
+4.34.134.0,US,Florida,Tampa
+4.34.134.128,US,Florida,Tampa
+4.34.135.0,US,Florida,Tampa
+4.35.208.0,US,Florida,Tampa
+4.35.253.0,US,Florida,Tampa
+4.53.168.0,US,Florida,Tampa
+4.53.174.0,US,Florida,Tampa
+4.1.2.224,US,Utah,Washington
+4.14.224.0,US,District of Columbia,Washington
+4.14.232.0,US,District of Columbia,Washington
+4.14.236.128,US,District of Columbia,Washington
+4.14.238.48,US,District of Columbia,Washington
+4.14.239.68,US,District of Columbia,Washington
+4.15.232.0,US,District of Columbia,Washington
+4.16.252.64,US,District of Columbia,Washington
+4.26.0.0,US,District of Columbia,Washington
+4.26.112.0,US,District of Columbia,Washington
+4.16.156.0,US,Virginia,Arlington
+4.34.240.0,US,Virginia,Arlington
+4.35.8.0,US,Virginia,Arlington
+4.35.232.0,US,Virginia,Arlington
+4.59.158.0,US,Virginia,Arlington
+8.3.80.0,US,Virginia,Arlington
+8.9.231.0,US,Virginia,Arlington
+8.14.192.0,US,Texas,Arlington
+8.14.196.0,US,Texas,Arlington
+8.14.198.0,US,Texas,Arlington
+4.1.72.0,US,Georgia,Atlanta
+4.1.73.0,US,Georgia,Atlanta
+4.7.136.224,US,Georgia,Atlanta
+4.7.140.0,US,Georgia,Atlanta
+4.14.26.0,US,Georgia,Atlanta
+4.15.180.0,US,Georgia,Atlanta
+4.21.22.0,US,Georgia,Atlanta
+4.21.30.0,US,Georgia,Atlanta
+4.26.56.0,US,Georgia,Atlanta
+4.28.24.0,US,Georgia,Atlanta
+65.79.211.0,US,Oklahoma,Boise City
+67.219.174.0,US,Oklahoma,Boise City
+216.251.3.32,US,Oklahoma,Boise City
+216.251.14.0,US,Oklahoma,Boise City
+216.251.15.64,US,Oklahoma,Boise City
+3.211.73.95,US,Colorado,Colorado Springs
+4.1.122.0,US,Colorado,Colorado Springs
+4.2.161.0,US,Colorado,Colorado Springs
+4.2.164.0,US,Colorado,Colorado Springs
+4.14.124.0,US,Colorado,Colorado Springs
+4.14.127.128,US,Colorado,Colorado Springs
+4.34.50.0,US,Colorado,Colorado Springs
+8.42.64.0,US,Colorado,Colorado Springs
+12.151.48.0,US,Colorado,Colorado Springs
+12.151.52.0,US,Colorado,Colorado Springs
+4.15.82.0,US,Texas,Corpus Christi
+4.35.184.0,US,Texas,Corpus Christi
+8.24.213.192,US,Texas,Corpus Christi
+12.27.157.192,US,Texas,Corpus Christi
+12.94.0.198,US,Texas,Corpus Christi
+12.126.120.0,US,Texas,Corpus Christi
+12.175.192.0,US,Texas,Corpus Christi
+12.175.200.0,US,Texas,Corpus Christi
+12.208.176.0,US,Texas,Corpus Christi
+23.119.48.0,US,Texas,Corpus Christi
+4.1.128.0,US,North Carolina,Durham
+4.34.228.0,US,North Carolina,Durham
+4.34.229.0,US,North Carolina,Durham
+4.59.160.0,US,North Carolina,Durham
+4.59.175.179,US,North Carolina,Durham
+5.249.186.0,US,North Carolina,Durham
+8.42.18.0,US,North Carolina,Durham
+12.179.196.96,US,North Carolina,Durham
+12.246.192.0,US,North Carolina,Durham
+17.17.0.0,US,North Carolina,Durham
+4.14.104.0,US,California,Fresno
+4.15.124.0,US,California,Fresno
+4.16.207.0,US,California,Fresno
+4.53.208.0,US,California,Fresno
+12.36.96.0,US,California,Fresno
+12.68.240.0,US,Texas,Fresno
+12.68.241.128,US,Texas,Fresno
+12.69.228.0,US,California,Fresno
+12.69.229.160,US,California,Fresno
+12.156.252.0,US,California,Fresno
+4.1.97.0,US,Nevada,Henderson
+4.14.194.0,US,Nevada,Henderson
+4.34.55.0,US,Colorado,Henderson
+5.61.27.0,US,Nevada,Henderson
+23.24.156.0,US,Colorado,Henderson
+24.29.24.0,US,Kentucky,Henderson
+24.106.179.244,US,North Carolina,Henderson
+24.106.183.180,US,North Carolina,Henderson
+24.106.184.84,US,North Carolina,Henderson
+24.106.188.4,US,North Carolina,Henderson
+4.15.216.0,US,Florida,Hialeah
+4.15.222.0,US,Florida,Hialeah
+8.18.87.128,US,Florida,Hialeah
+8.19.60.192,US,Florida,Hialeah
+8.19.206.0,US,Florida,Hialeah
+8.26.226.128,US,Florida,Hialeah
+12.8.160.0,US,Florida,Hialeah
+12.12.176.0,US,Florida,Hialeah
+12.42.96.0,US,Florida,Hialeah
+12.97.60.0,US,Florida,Hialeah
+4.31.60.0,US,Hawaii,Honolulu
+4.31.61.119,US,Hawaii,Honolulu
+8.20.125.0,US,Hawaii,Honolulu
+12.2.150.8,US,Hawaii,Honolulu
+12.2.150.32,US,Hawaii,Honolulu
+12.42.108.144,US,Hawaii,Honolulu
+12.104.224.0,US,Hawaii,Honolulu
+13.104.183.176,US,Hawaii,Honolulu
+17.25.80.0,US,Hawaii,Honolulu
+17.26.144.0,US,Hawaii,Honolulu
+4.7.200.0,US,Texas,Irving
+4.7.202.132,US,Texas,Irving
+4.14.20.0,US,Texas,Irving
+4.14.21.128,US,Texas,Irving
+4.14.21.227,US,Texas,Irving
+4.14.128.0,US,Texas,Irving
+4.16.236.128,US,Texas,Irving
+4.30.68.0,US,Texas,Irving
+4.30.68.67,US,Texas,Irving
+4.71.14.0,US,Texas,Irving
+4.34.72.0,US,New Jersey,Jersey City
+5.253.187.0,US,New Jersey,Jersey City
+12.184.96.0,US,New Jersey,Jersey City
+23.24.79.0,US,New Jersey,Jersey City
+23.244.155.0,US,New Jersey,Jersey City
+23.246.96.4,US,New Jersey,Jersey City
+23.246.96.32,US,New Jersey,Jersey City
+23.246.96.40,US,New Jersey,Jersey City
+23.246.96.60,US,New Jersey,Jersey City
+23.246.96.68,US,New Jersey,Jersey City
+4.7.64.0,US,Missouri,Kansas City
+4.7.67.128,US,Missouri,Kansas City
+4.7.68.0,US,Missouri,Kansas City
+4.15.200.0,US,Missouri,Kansas City
+4.15.202.16,US,Missouri,Kansas City
+4.15.202.24,US,Missouri,Kansas City
+5.181.164.0,US,Missouri,Kansas City
+5.182.19.0,US,Missouri,Kansas City
+8.33.22.0,US,Missouri,Kansas City
+8.41.31.0,US,Missouri,Kansas City
+4.1.167.0,US,Nevada,Las Vegas
+4.14.192.0,US,Nevada,Las Vegas
+4.14.196.0,US,Nevada,Las Vegas
+4.16.141.0,US,Nevada,Las Vegas
+4.16.141.222,US,Nevada,Las Vegas
+4.16.141.223,US,Nevada,Las Vegas
+4.26.12.0,US,Nevada,Las Vegas
+4.26.179.64,US,Nevada,Las Vegas
+4.35.32.0,US,Nevada,Las Vegas
+4.35.36.160,US,Nevada,Las Vegas
+4.53.32.0,US,Nebraska,Lincoln
+5.230.5.64,US,Nebraska,Lincoln
+5.230.5.136,US,Nebraska,Lincoln
+5.230.129.8,US,Nebraska,Lincoln
+5.230.129.80,US,Nebraska,Lincoln
+5.230.129.152,US,Nebraska,Lincoln
+5.230.129.200,US,Nebraska,Lincoln
+5.230.132.16,US,Nebraska,Lincoln
+8.8.32.0,US,Rhode Island,Lincoln
+8.33.16.0,US,Missouri,Lincoln
+4.23.0.0,US,California,Long Beach
+4.71.110.0,US,California,Long Beach
+6.185.224.0,US,California,Long Beach
+8.3.64.0,US,California,Long Beach
+8.36.84.0,US,New York,Long Beach
+12.7.116.0,US,California,Long Beach
+12.7.116.192,US,California,Long Beach
+12.18.176.0,US,California,Long Beach
+12.18.176.16,US,California,Long Beach
+12.38.128.0,US,California,Long Beach
+4.1.110.0,US,Louisiana,New Orleans
+5.62.59.5,US,Louisiana,New Orleans
+8.21.216.0,US,Louisiana,New Orleans
+12.10.72.0,US,Louisiana,New Orleans
+12.21.192.0,US,Louisiana,New Orleans
+12.161.176.0,US,Louisiana,New Orleans
+12.161.188.0,US,Louisiana,New Orleans
+12.173.72.0,US,Louisiana,New Orleans
+12.191.176.0,US,Louisiana,New Orleans
+12.191.184.0,US,Louisiana,New Orleans
+4.15.236.0,US,Virginia,Norfolk
+4.16.243.0,US,Virginia,Norfolk
+4.28.126.0,US,Virginia,Norfolk
+8.46.114.0,US,Virginia,Norfolk
+8.48.253.128,US,Virginia,Norfolk
+12.203.212.0,US,Virginia,Norfolk
+23.229.5.24,US,Virginia,Norfolk
+23.229.11.184,US,Virginia,Norfolk
+23.239.176.0,US,Virginia,Norfolk
+24.116.216.0,US,Nebraska,Norfolk
+4.16.80.0,US,Nevada,Reno
+4.16.81.0,US,Nevada,Reno
+12.24.56.0,US,Nevada,Reno
+12.24.62.0,US,Nevada,Reno
+12.41.88.64,US,Nevada,Reno
+12.53.224.0,US,Nevada,Reno
+12.53.233.0,US,Nevada,Reno
+12.117.128.0,US,Nevada,Reno
+12.183.254.248,US,Nevada,Reno
+12.186.111.48,US,Nevada,Reno
+2.59.8.0,US,California,San Jose
+3.3.24.0,US,California,San Jose
+3.5.160.0,US,California,San Jose
+3.101.0.0,US,California,San Jose
+4.4.34.0,US,California,San Jose
+4.14.106.0,US,California,San Jose
+4.16.86.0,US,California,San Jose
+4.28.14.0,US,California,San Jose
+4.30.144.0,US,California,San Jose
+4.30.152.0,US,California,San Jose
+4.42.160.0,US,California,Santa Ana
+4.53.180.0,US,California,Santa Ana
+4.53.184.0,US,California,Santa Ana
+8.48.3.192,US,California,Santa Ana
+12.26.148.0,US,California,Santa Ana
+12.29.12.0,US,California,Santa Ana
+12.152.24.0,US,California,Santa Ana
+12.169.182.0,US,California,Santa Ana
+12.172.104.0,US,California,Santa Ana
+12.174.29.0,US,California,Santa Ana
+2.19.128.0,US,Washington,Seattle
+2.20.32.0,US,Washington,Seattle
+2.56.20.0,US,Washington,Seattle
+2.59.62.0,US,Washington,Seattle
+4.14.242.0,US,Washington,Seattle
+4.14.242.160,US,Washington,Seattle
+4.14.244.0,US,Washington,Seattle
+4.16.3.0,US,Washington,Seattle
+4.16.144.0,US,Washington,Seattle
+4.16.146.4,US,Washington,Seattle
+4.34.133.0,US,Florida,St. Petersburg
+4.35.212.0,US,Florida,St. Petersburg
+8.19.244.0,US,Florida,St. Petersburg
+23.28.128.0,US,Florida,St. Petersburg
+23.28.131.35,US,Florida,St. Petersburg
+23.28.166.0,US,Florida,St. Petersburg
+23.28.170.0,US,Florida,St. Petersburg
+23.28.208.0,US,Florida,St. Petersburg
+24.35.27.0,US,Florida,St. Petersburg
+24.35.33.0,US,Florida,St. Petersburg
+8.31.64.0,US,California,Stockton
+8.31.67.128,US,California,Stockton
+8.36.243.0,US,Kansas,Stockton
+8.42.80.0,US,Kansas,Stockton
+8.42.81.128,US,Kansas,Stockton
+8.42.82.0,US,Kansas,Stockton
+8.42.83.0,US,Kansas,Stockton
+8.42.86.0,US,Kansas,Stockton
+8.42.89.0,US,Kansas,Stockton
+12.0.204.0,US,California,Stockton
+4.17.84.0,US,Ohio,Toledo
+4.17.84.219,US,Ohio,Toledo
+12.160.25.144,US,Ohio,Toledo
+12.237.202.96,US,Ohio,Toledo
+17.21.104.0,US,Ohio,Toledo
+23.116.200.0,US,Ohio,Toledo
+24.52.68.0,US,Ohio,Toledo
+24.52.70.0,US,Ohio,Toledo
+24.52.77.0,US,Ohio,Toledo
+24.52.79.128,US,Ohio,Toledo
+4.4.16.0,US,Kansas,Wichita
+4.14.49.0,US,Kansas,Wichita
+4.16.22.0,US,Kansas,Wichita
+4.31.129.0,US,Kansas,Wichita
+5.62.57.19,US,Kansas,Wichita
+5.62.58.253,US,Kansas,Wichita
+8.39.217.0,US,Kansas,Wichita
+8.42.246.0,US,Kansas,Wichita
+12.39.160.0,US,Kansas,Wichita
+12.70.144.0,US,Kansas,Wichita
+4.1.152.152,US,New Mexico,Albuquerque
+4.14.112.64,US,New Mexico,Albuquerque
+4.14.114.0,US,New Mexico,Albuquerque
+4.34.56.0,US,New Mexico,Albuquerque
+12.41.185.24,US,New Mexico,Albuquerque
+17.26.96.0,US,New Mexico,Albuquerque
+23.31.113.0,US,New Mexico,Albuquerque
+23.31.115.0,US,New Mexico,Albuquerque
+23.31.116.0,US,New Mexico,Albuquerque
+23.31.117.0,US,New Mexico,Albuquerque
+2.56.232.0,US,Maryland,Baltimore
+4.7.48.0,US,Maryland,Baltimore
+4.7.49.64,US,Maryland,Baltimore
+4.7.49.96,US,Maryland,Baltimore
+4.30.224.0,US,Maryland,Baltimore
+4.30.228.0,US,Maryland,Baltimore
+4.59.240.0,US,Maryland,Baltimore
+5.62.59.13,US,Maryland,Baltimore
+5.182.104.0,US,Maryland,Baltimore
+8.17.161.0,US,Maryland,Baltimore
+3.212.221.12,US,Massachusetts,Boston
+4.14.177.0,US,Massachusetts,Boston
+4.14.180.0,US,Massachusetts,Boston
+4.16.10.0,US,Massachusetts,Boston
+4.16.11.72,US,Massachusetts,Boston
+5.182.51.0,US,Massachusetts,Boston
+12.53.200.0,US,Massachusetts,Boston
+12.130.32.0,US,Massachusetts,Boston
+12.172.230.128,US,Kentucky,Boston
+12.226.27.64,US,Massachusetts,Boston
+4.15.88.0,US,New York,Buffalo
+4.15.88.128,US,New York,Buffalo
+4.15.88.192,US,New York,Buffalo
+4.15.88.224,US,New York,Buffalo
+4.15.89.0,US,New York,Buffalo
+5.226.171.0,US,New York,Buffalo
+5.252.234.0,US,New York,Buffalo
+8.10.148.0,US,New York,Buffalo
+8.22.104.0,US,New York,Buffalo
+8.37.48.0,US,New York,Buffalo
+2.56.32.0,US,North Carolina,Charlotte
+4.1.129.0,US,North Carolina,Charlotte
+4.1.131.0,US,North Carolina,Charlotte
+4.4.102.0,US,North Carolina,Charlotte
+4.7.59.0,US,North Carolina,Charlotte
+4.7.59.98,US,North Carolina,Charlotte
+4.7.59.99,US,North Carolina,Charlotte
+4.7.116.0,US,North Carolina,Charlotte
+4.7.136.0,US,North Carolina,Charlotte
+4.7.226.0,US,North Carolina,Charlotte
+3.222.53.74,US,Ohio,Cincinnati
+4.1.8.0,US,Ohio,Cincinnati
+4.4.61.0,US,Ohio,Cincinnati
+4.7.156.0,US,Ohio,Cincinnati
+4.14.11.0,US,Ohio,Cincinnati
+4.14.11.215,US,Ohio,Cincinnati
+4.16.212.0,US,Ohio,Cincinnati
+4.16.212.192,US,Ohio,Cincinnati
+4.30.80.0,US,Ohio,Cincinnati
+4.30.83.128,US,Ohio,Cincinnati
+4.1.24.0,US,Colorado,Denver
+4.1.30.0,US,Colorado,Denver
+4.1.120.0,US,Colorado,Denver
+4.1.176.0,US,Colorado,Denver
+4.2.165.0,US,Colorado,Denver
+4.2.168.0,US,Colorado,Denver
+4.4.76.0,US,Colorado,Denver
+4.4.78.0,US,Colorado,Denver
+4.4.78.160,US,Colorado,Denver
+4.4.79.94,US,Colorado,Denver
+12.124.176.0,US,Indiana,Fort Wayne
+12.162.32.0,US,Indiana,Fort Wayne
+23.244.124.0,US,Indiana,Fort Wayne
+24.52.64.0,US,Indiana,Fort Wayne
+40.135.154.0,US,Indiana,Fort Wayne
+40.135.158.0,US,Indiana,Fort Wayne
+45.52.228.0,US,Indiana,Fort Wayne
+45.52.232.0,US,Indiana,Fort Wayne
+45.53.68.0,US,Indiana,Fort Wayne
+50.79.21.0,US,Indiana,Fort Wayne
+4.7.206.0,US,Texas,Fort Worth
+4.31.221.0,US,Texas,Fort Worth
+4.71.121.0,US,Texas,Fort Worth
+4.71.222.0,US,Texas,Fort Worth
+8.38.210.0,US,Texas,Fort Worth
+8.48.248.128,US,Texas,Fort Worth
+12.4.176.0,US,Texas,Fort Worth
+12.4.184.0,US,Texas,Fort Worth
+12.11.48.0,US,Texas,Fort Worth
+12.26.164.0,US,Texas,Fort Worth
+4.16.204.0,US,California,Fremont
+5.101.46.0,US,California,Fremont
+5.181.203.0,US,California,Fremont
+5.188.179.0,US,California,Fremont
+5.188.201.0,US,California,Fremont
+5.189.216.0,US,California,Fremont
+5.189.252.0,US,California,Fremont
+12.32.72.0,US,California,Fremont
+12.172.80.0,US,California,Fremont
+12.202.168.0,US,California,Fremont
+3.2.0.0,US,Texas,Houston
+3.211.125.142,US,Texas,Houston
+4.2.224.0,US,Texas,Houston
+4.2.236.0,US,Texas,Houston
+4.4.52.0,US,Texas,Houston
+4.7.146.0,US,Texas,Houston
+4.7.147.192,US,Texas,Houston
+4.7.148.0,US,Texas,Houston
+4.14.57.128,US,Texas,Houston
+4.14.200.0,US,Texas,Houston
+4.7.38.32,US,Florida,Jacksonville
+4.15.116.0,US,Florida,Jacksonville
+4.17.72.0,US,Florida,Jacksonville
+4.18.132.0,US,Florida,Jacksonville
+4.18.133.0,US,Florida,Jacksonville
+4.28.29.0,US,Florida,Jacksonville
+4.35.248.0,US,Florida,Jacksonville
+4.53.45.0,US,Florida,Jacksonville
+4.59.8.0,US,Florida,Jacksonville
+5.183.78.0,US,Florida,Jacksonville
+4.18.105.192,US,Arizona,Mesa
+4.28.80.0,US,Arizona,Mesa
+4.79.124.0,US,Arizona,Mesa
+8.44.225.0,US,Arizona,Mesa
+17.33.208.0,US,Arizona,Mesa
+17.47.128.0,US,Arizona,Mesa
+17.57.0.0,US,Arizona,Mesa
+17.132.68.0,US,Arizona,Mesa
+17.248.246.0,US,Arizona,Mesa
+17.253.60.0,US,Arizona,Mesa
+3.210.167.96,US,Florida,Miami
+4.4.108.0,US,Florida,Miami
+4.7.41.0,US,Florida,Miami
+4.7.47.0,US,Florida,Miami
+4.16.176.34,US,Florida,Miami
+4.16.179.0,US,Florida,Miami
+4.16.182.5,US,Florida,Miami
+4.16.182.128,US,Florida,Miami
+4.16.182.198,US,Florida,Miami
+4.16.182.199,US,Florida,Miami
+4.1.12.0,US,Minnesota,Minneapolis
+4.1.114.234,US,Minnesota,Minneapolis
+4.1.184.0,US,Minnesota,Minneapolis
+4.4.81.0,US,Minnesota,Minneapolis
+4.4.83.0,US,Minnesota,Minneapolis
+4.4.83.16,US,Minnesota,Minneapolis
+4.4.84.0,US,Minnesota,Minneapolis
+4.4.209.148,US,Minnesota,Minneapolis
+4.7.216.0,US,Minnesota,Minneapolis
+4.7.218.124,US,Minnesota,Minneapolis
+2.56.114.0,US,New York,New York
+2.56.151.0,US,New York,New York
+2.57.148.0,US,New York,New York
+2.57.168.0,US,New York,New York
+3.91.167.40,US,New York,New York
+3.208.75.158,US,New York,New York
+3.227.93.153,US,New York,New York
+3.227.164.87,US,New York,New York
+4.7.122.198,US,New York,New York
+4.7.169.0,US,New York,New York
+4.7.34.0,US,Florida,Orlando
+4.7.34.144,US,Florida,Orlando
+4.15.214.0,US,Florida,Orlando
+4.17.64.0,US,Florida,Orlando
+4.17.74.0,US,Florida,Orlando
+4.17.75.0,US,Florida,Orlando
+4.31.178.0,US,Florida,Orlando
+4.35.250.0,US,Florida,Orlando
+4.35.252.0,US,Florida,Orlando
+4.35.254.0,US,Florida,Orlando
+4.16.76.0,US,Virginia,Richmond
+4.28.224.0,US,Virginia,Richmond
+4.28.240.0,US,Virginia,Richmond
+4.30.98.0,US,Virginia,Richmond
+4.30.102.0,US,Virginia,Richmond
+4.34.226.0,US,Virginia,Richmond
+4.35.200.0,US,Texas,Richmond
+4.49.112.0,US,Vermont,Richmond
+4.53.78.128,US,Kentucky,Richmond
+4.79.20.0,US,Virginia,Richmond
+8.48.3.32,US,California,Riverside
+12.10.16.0,US,California,Riverside
+12.24.52.0,US,California,Riverside
+12.89.16.0,US,Illinois,Riverside
+12.108.116.0,US,California,Riverside
+12.108.126.16,US,California,Riverside
+12.155.48.0,US,Illinois,Riverside
+12.155.55.0,US,Illinois,Riverside
+12.188.204.0,US,California,Riverside
+12.199.138.0,US,California,Riverside
+12.69.208.0,US,California,San Bernardino
+12.231.192.0,US,California,San Bernardino
+24.24.244.0,US,California,San Bernardino
+24.24.252.0,US,California,San Bernardino
+24.43.3.28,US,California,San Bernardino
+24.43.4.88,US,California,San Bernardino
+24.43.7.20,US,California,San Bernardino
+24.43.11.228,US,California,San Bernardino
+24.43.12.120,US,California,San Bernardino
+24.43.13.196,US,California,San Bernardino
+4.4.64.0,US,Arizona,Tucson
+4.4.168.0,US,Arizona,Tucson
+4.7.242.0,US,Arizona,Tucson
+4.7.244.0,US,Arizona,Tucson
+4.7.245.131,US,Arizona,Tucson
+4.15.8.0,US,Arizona,Tucson
+4.16.136.0,US,Arizona,Tucson
+4.16.142.0,US,Arizona,Tucson
+4.28.82.0,US,Arizona,Tucson
+12.164.135.96,US,Arizona,Tucson
+4.16.16.0,US,Oklahoma,Tulsa
+4.16.19.0,US,Oklahoma,Tulsa
+4.34.190.192,US,Oklahoma,Tulsa
+8.43.42.0,US,Oklahoma,Tulsa
+8.43.56.0,US,Oklahoma,Tulsa
+8.43.58.0,US,Oklahoma,Tulsa
+12.186.64.0,US,Oklahoma,Tulsa
+12.186.82.0,US,Oklahoma,Tulsa
+12.186.88.0,US,Oklahoma,Tulsa
+12.216.50.0,US,Oklahoma,Tulsa
+12.110.192.0,US,Virginia,Virginia Beach
+12.110.193.176,US,Virginia,Virginia Beach
+12.110.202.0,US,Virginia,Virginia Beach
+17.21.80.0,US,Virginia,Virginia Beach
+23.168.176.0,US,Virginia,Virginia Beach
+23.169.208.0,US,Virginia,Virginia Beach
+24.248.17.0,US,Virginia,Virginia Beach
+24.248.22.0,US,Virginia,Virginia Beach
+24.248.28.0,US,Virginia,Virginia Beach
+24.249.122.0,US,Virginia,Virginia Beach
+8.37.36.0,US,North Carolina,Winston-Salem
+12.165.204.0,US,North Carolina,Winston-Salem
+23.127.208.0,US,North Carolina,Winston-Salem
+23.127.212.0,US,North Carolina,Winston-Salem
+24.88.140.0,US,North Carolina,Winston-Salem
+24.88.160.0,US,North Carolina,Winston-Salem
+24.88.168.0,US,North Carolina,Winston-Salem
+24.88.169.0,US,North Carolina,Winston-Salem
+24.88.170.0,US,North Carolina,Winston-Salem
+24.88.176.0,US,North Carolina,Winston-Salem
