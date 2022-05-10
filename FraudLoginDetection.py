@@ -73,24 +73,33 @@ def processData(request):
     if len(user_login) > 0:
         last_logged_time = int(user_login['Time'].values[0])
         current_logged_time = int(TIME)
-        if current_logged_time - last_logged_time < 10 * 60:
+        if current_logged_time - last_logged_time < 40000 * 60:
             last_location = user_login['Location'].values[0]
             current_logged_location= getLocationFromIP(IPv4)
             if last_location in current_logged_location:
                 last_Logged_device = user_login['DeviceType'].values[0].split(",")
                 current_logged_device = DEVICE_TYPE
                 if current_logged_device in last_Logged_device:
+                    print("Valid Login -> ", request.values[0])
                     updateTimeStamp(user_login, current_logged_time)
-                    print("Valid Login within timestamp -> ", request.values[0])
                 else:
-                    print("Anuj current", current_logged_device,"\n")
-                    print("Anuj last ", last_Logged_device,"\n")
                     produceToAlerts(request.values[0]+",DeviceAlert"+","+' '.join(current_logged_location))
             else:
                 produceToAlerts(request.values[0]+",SignInAlert"+","+' '.join(current_logged_location))
         else:
-            print("Valid Login after timestamp-> ", request.values[0])
-            updateTimeStamp(user_login, current_logged_time)
+            last_location = user_login['Location'].values[0]
+            current_logged_location = getLocationFromIP(IPv4)
+            if last_location not in current_logged_location:
+                last_Logged_device = user_login['DeviceType'].values[0].split(",")
+                current_logged_device = DEVICE_TYPE
+                if current_logged_device in last_Logged_device:
+                    print("Valid Login -> ", request.values[0])
+                    updateTimeStamp(user_login, current_logged_time)
+                else:
+                    produceToAlerts(request.values[0] + ",SignInAlert" + "," + ' '.join(current_logged_location))
+            else:
+                print("Valid Login -> ", request.values[0])
+                updateTimeStamp(user_login, current_logged_time)
 
 def convert_string_to_json(row) :
     request = json.loads(row)

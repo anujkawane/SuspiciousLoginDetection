@@ -17,7 +17,6 @@ running = True
 
 def msg_process(msg):
     list = json.loads(msg.value()).split(",")
-    print(list)
     message = "Hi " + list[4] + ", \n" \
                 "We detected a sign-in to your account.\n" \
                 "When: " + time.strftime('%A, %B %-d, %Y %H:%M:%S',time.localtime(int(list[1]))) + "\n" \

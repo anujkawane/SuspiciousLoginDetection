@@ -14,7 +14,6 @@ conf = {'bootstrap.servers': KAFKA_HOST,
 TOPIC_SERVER_LOGS = 'server_logs'
 
 deviceTypes = ['Android', 'IOS', 'Windows', 'Mac OS']
-
 User_Login_History = ps.read_csv(PATH + '/User_login_history.csv')
 IPv4_Location_Mapping = ps.read_csv(PATH + '/IPv4_Location_Mapping.csv')
 
@@ -60,7 +59,6 @@ def getServerLog(choice):
         log = good_data()
     else:
         log = bad_data()
-    print(log.returnCommaSeparated)
     return log.returnCommaSeparated()
 
 def acked(err, msg):
@@ -72,18 +70,17 @@ def acked(err, msg):
 def produce():
     producer = Producer(conf)
     datalist = ["GOOD", "BAD"]
-    for i in range(20):
+    for i in range(100):
         choice = random.choices(datalist, weights=(80, 20))
         data = None
         if "GOOD" in choice:
             data = getServerLog("GOOD")
         else:
             data = getServerLog("BAD")
-        print(data)
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)
         producer.flush()
 
-        # print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
+        print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
         producer.poll(1)
 
 if __name__ == '__main__':
