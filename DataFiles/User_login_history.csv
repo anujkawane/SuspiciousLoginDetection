@@ -1,101 +1,101 @@
-UserID,Location,DeviceType,Time
-82582,Tulsa,"Android,Windows",1652062866
-84873,San Francisco,"Android,Mac OS",1652062866
-18810,Washington,"Android,Mac OS",1652062866
-61093,Seattle,"Mac OS,Android",1652062866
-49955,San Bernardino,"Mac OS,Windows",1652062866
-54688,Portland,"Mac OS,IOS",1652062866
-47072,Tucson,"Android,IOS",1652062866
-58778,Miami,"Mac OS,Android",1652062866
-39816,Columbus,"Windows,Android",1652062866
-65478,San Diego,"Windows,Mac OS",1652062866
-21713,Irvine,"IOS,Windows",1652062866
-96959,Colorado Springs,"Windows,Android",1652062866
-30053,Chandler,"Android,IOS",1652062866
-37801,Chandler,"Mac OS,Android",1652062866
-21484,Tampa,"Mac OS,Android",1652062866
-71104,Kansas City,"Android,IOS",1652062866
-18452,Nashville,"Windows,IOS",1652062866
-16932,Bakersfield,"Mac OS,Android",1652062866
-53905,Cincinnati,"IOS,Windows",1652062866
-32631,Virginia Beach,"Windows,Mac OS",1652062866
-46575,Irvine,"IOS,Windows",1652062866
-35319,Sacramento,"Mac OS,Windows",1652062866
-15473,Aurora,"Windows,Android",1652062866
-22001,Atlanta,"Android,Mac OS",1652062866
-58999,Lincoln,"Mac OS,IOS",1652062866
-86771,Jacksonville,"Android,IOS",1652062866
-80214,Scottsdale,"Windows,Mac OS",1652062866
-29910,Honolulu,"Windows,IOS",1652062866
-88249,Mesa,"Windows,Mac OS",1652062866
-82799,Pittsburgh,"IOS,Windows",1652062866
-87196,Baton Rouge,"Mac OS,Android",1652062866
-63751,Denver,"Windows,IOS",1652062866
-93827,Boise City,"Mac OS,Windows",1652062866
-14285,Sacramento,"Windows,IOS",1652062866
-46107,Santa Ana,"Windows,Mac OS",1652062866
-25848,Denver,"Android,Mac OS",1652062866
-35400,Laredo,"IOS,Mac OS",1652062866
-97119,Lincoln,"Mac OS,IOS",1652062866
-91216,Cincinnati,"Windows,Android",1652062866
-95930,Fremont,"IOS,Windows",1652062866
-35040,Lincoln,"IOS,Android",1652062866
-78531,Aurora,"IOS,Mac OS",1652062866
-89754,Scottsdale,"Android,IOS",1652062866
-63706,Milwaukee,"Windows,Android",1652062866
-76476,Baton Rouge,"Windows,Mac OS",1652062866
-19605,Denver,"Android,Mac OS",1652062866
-18180,Detroit,"IOS,Android",1652062866
-14697,San Diego,"Windows,IOS",1652062866
-63633,Fort Worth,"IOS,Android",1652062866
-32205,Phoenix,"Android,Windows",1652062866
-63251,Orlando,"Windows,IOS",1652062866
-68444,Greensboro,"IOS,Android",1652062866
-67053,Raleigh,"Mac OS,Windows",1652062866
-74434,Madison,"IOS,Android",1652062866
-29742,Nashville,"Windows,Mac OS",1652062866
-62408,Plano,"Mac OS,IOS",1652062866
-41440,Lincoln,"Android,IOS",1652062866
-40357,Chesapeake,"Android,Mac OS",1652062866
-73948,Richmond,"IOS,Windows",1652062866
-93882,Garland,"Android,IOS",1652062866
-89351,Dallas,"Android,IOS",1652062866
-91828,Chula Vista,"Windows,Mac OS",1652062866
-30692,San Jose,"Windows,IOS",1652062866
-44089,Reno,"IOS,Windows",1652062866
-29539,New York,"Mac OS,IOS",1652062866
-24855,Buffalo,"Android,Mac OS",1652062866
-22266,Toledo,"Android,IOS",1652062866
-29089,Mesa,"Mac OS,IOS",1652062866
-72974,Fresno,"Mac OS,Windows",1652062866
-57334,Newark,"IOS,Mac OS",1652062866
-48955,Newark,"Mac OS,IOS",1652062866
-91515,Charlotte,"Mac OS,Android",1652062866
-74062,Winston-Salem,"IOS,Mac OS",1652062866
-25760,Henderson,"Mac OS,Windows",1652062866
-24076,Baltimore,"Android,IOS",1652062866
-95183,Pittsburgh,"Windows,Mac OS",1652062866
-50805,Washington,"Windows,Android",1652062866
-73883,Fresno,"Windows,Android",1652062866
-38425,Newark,"Mac OS,Windows",1652062866
-39586,Louisville,"IOS,Mac OS",1652062866
-53691,Minneapolis,"IOS,Mac OS",1652062866
-99414,Fort Worth,"IOS,Windows",1652062866
-50852,Durham,"IOS,Mac OS",1652062866
-93420,Colorado Springs,"Android,IOS",1652062866
-95572,Minneapolis,"Windows,Mac OS",1652062866
-41353,Plano,"IOS,Windows",1652062866
-37674,El Paso,"IOS,Android",1652062866
-12164,Los Angeles,"IOS,Android",1652062866
-32747,Richmond,"IOS,Mac OS",1652062866
-57298,Toledo,"IOS,Android",1652062866
-34926,Aurora,"Windows,Android",1652062866
-51343,Anaheim,"Windows,Android",1652062866
-34843,Greensboro,"Mac OS,Windows",1652062866
-53553,Philadelphia,"Android,Windows",1652062866
-20758,Detroit,"Android,IOS",1652062866
-86557,Anaheim,"Windows,Mac OS",1652062866
-60297,Buffalo,"Mac OS,Windows",1652062866
-90257,Raleigh,"Windows,IOS",1652062866
-38683,Denver,"Windows,Android",1652062866
-70332,Arlington,"Mac OS,IOS",1652062866
+UserID,Location,DeviceType
+82582,Tulsa,"Android,Windows"
+84873,San Francisco,"Android,Mac OS"
+18810,Washington,"Android,Mac OS"
+61093,Seattle,"Mac OS,Android"
+49955,San Bernardino,"Mac OS,Windows"
+54688,Portland,"Mac OS,IOS"
+47072,Tucson,"Android,IOS"
+58778,Miami,"Mac OS,Android"
+39816,Columbus,"Windows,Android"
+65478,San Diego,"Windows,Mac OS"
+21713,Irvine,"IOS,Windows"
+96959,Colorado Springs,"Windows,Android"
+30053,Chandler,"Android,IOS"
+37801,Chandler,"Mac OS,Android"
+21484,Tampa,"Mac OS,Android"
+71104,Kansas City,"Android,IOS"
+18452,Nashville,"Windows,IOS"
+16932,Bakersfield,"Mac OS,Android"
+53905,Cincinnati,"IOS,Windows"
+32631,Virginia Beach,"Windows,Mac OS"
+46575,Irvine,"IOS,Windows"
+35319,Sacramento,"Mac OS,Windows"
+15473,Aurora,"Windows,Android"
+22001,Atlanta,"Android,Mac OS"
+58999,Lincoln,"Mac OS,IOS"
+86771,Jacksonville,"Android,IOS"
+80214,Scottsdale,"Windows,Mac OS"
+29910,Honolulu,"Windows,IOS"
+88249,Mesa,"Windows,Mac OS"
+82799,Pittsburgh,"IOS,Windows"
+87196,Baton Rouge,"Mac OS,Android"
+63751,Denver,"Windows,IOS"
+93827,Boise City,"Mac OS,Windows"
+14285,Sacramento,"Windows,IOS"
+46107,Santa Ana,"Windows,Mac OS"
+25848,Denver,"Android,Mac OS"
+35400,Laredo,"IOS,Mac OS"
+97119,Lincoln,"Mac OS,IOS"
+91216,Cincinnati,"Windows,Android"
+95930,Fremont,"IOS,Windows"
+35040,Lincoln,"IOS,Android"
+78531,Aurora,"IOS,Mac OS"
+89754,Scottsdale,"Android,IOS"
+63706,Milwaukee,"Windows,Android"
+76476,Baton Rouge,"Windows,Mac OS"
+19605,Denver,"Android,Mac OS"
+18180,Detroit,"IOS,Android"
+14697,San Diego,"Windows,IOS"
+63633,Fort Worth,"IOS,Android"
+32205,Phoenix,"Android,Windows"
+63251,Orlando,"Windows,IOS"
+68444,Greensboro,"IOS,Android"
+67053,Raleigh,"Mac OS,Windows"
+74434,Madison,"IOS,Android"
+29742,Nashville,"Windows,Mac OS"
+62408,Plano,"Mac OS,IOS"
+41440,Lincoln,"Android,IOS"
+40357,Chesapeake,"Android,Mac OS"
+73948,Richmond,"IOS,Windows"
+93882,Garland,"Android,IOS"
+89351,Dallas,"Android,IOS"
+91828,Chula Vista,"Windows,Mac OS"
+30692,San Jose,"Windows,IOS"
+44089,Reno,"IOS,Windows"
+29539,New York,"Mac OS,IOS"
+24855,Buffalo,"Android,Mac OS"
+22266,Toledo,"Android,IOS"
+29089,Mesa,"Mac OS,IOS"
+72974,Fresno,"Mac OS,Windows"
+57334,Newark,"IOS,Mac OS"
+48955,Newark,"Mac OS,IOS"
+91515,Charlotte,"Mac OS,Android"
+74062,Winston-Salem,"IOS,Mac OS"
+25760,Henderson,"Mac OS,Windows"
+24076,Baltimore,"Android,IOS"
+95183,Pittsburgh,"Windows,Mac OS"
+50805,Washington,"Windows,Android"
+73883,Fresno,"Windows,Android"
+38425,Newark,"Mac OS,Windows"
+39586,Louisville,"IOS,Mac OS"
+53691,Minneapolis,"IOS,Mac OS"
+99414,Fort Worth,"IOS,Windows"
+50852,Durham,"IOS,Mac OS"
+93420,Colorado Springs,"Android,IOS"
+95572,Minneapolis,"Windows,Mac OS"
+41353,Plano,"IOS,Windows"
+37674,El Paso,"IOS,Android"
+12164,Los Angeles,"IOS,Android"
+32747,Richmond,"IOS,Mac OS"
+57298,Toledo,"IOS,Android"
+34926,Aurora,"Windows,Android"
+51343,Anaheim,"Windows,Android"
+34843,Greensboro,"Mac OS,Windows"
+53553,Philadelphia,"Android,Windows"
+20758,Detroit,"Android,IOS"
+86557,Anaheim,"Windows,Mac OS"
+60297,Buffalo,"Mac OS,Windows"
+90257,Raleigh,"Windows,IOS"
+38683,Denver,"Windows,Android"
+70332,Arlington,"Mac OS,IOS"

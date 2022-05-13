@@ -7,12 +7,12 @@ import sys, socket, json, os, time, math, pyspark.pandas as ps
 KAFKA_HOST = 'localhost:29092'
 TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
-PATH = os.getcwd() + '/DataFiles'
+PATH = '/Users/anujkawane/Desktop/BigDataProject/FruadLoginDetection/DataFiles'
 AUTO_LOGOUT_TIME_MINUTES = 10
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
         'group.id': "FraudLoginDetection",
-        'auto.offset.reset': 'smallest'}
+        'auto.offset.reset': 'latest'}
 
 spark = (SparkSession
          .builder
@@ -28,10 +28,10 @@ df = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", KAFKA_HOST) \
     .option("subscribe", TOPIC_SERVER_LOGS) \
-    .option("startingOffsets", "earliest") \
+    .option("startingOffsets", "latest") \
     .option("maxOffsetsPerTrigger", 1) \
     .option("group.id", "2") \
-    .option("auto.offset.reset", "earliest") \
+    .option("auto.offset.reset", "latest") \
     .load()
 
 schema = StructType([
@@ -62,6 +62,7 @@ def deleteRecordsBeforeTime():
     value = math.ceil(time.time()) - (AUTO_LOGOUT_TIME_MINUTES * 60)
     UserLoginStatus = UserLoginStatus.where(col("LastLoginTime") > value)
 
+
 def getLocationFromIP(ip_address):
     location_ip_df = IPv4_Location_Mapping[IPv4_Location_Mapping['IP'] == ip_address]
     country = str(location_ip_df['Country'].values[0])
@@ -78,8 +79,8 @@ def acked(err, msg):
 
 
 def processData(request):
+    global UserLoginStatus
     deleteRecordsBeforeTime()
-
     global countConsumed
     countConsumed = countConsumed + 1
 
@@ -100,7 +101,7 @@ def processData(request):
             last_Logged_device = userData['DeviceType'].values[0].split(",")
             current_logged_device = device_type
             if current_logged_device in last_Logged_device:
-                print("Valid Login -> ", request.values[0]+ "," +' '.join(current_logged_location))
+                produceToAlerts(request.values[0] + ",validLogin" + "," + ' '.join(current_logged_location))
                 updateTimeStamp(user_id, current_logged_time)
             else:
                 produceToAlerts(request.values[0] + ",DeviceAlert" + "," + ' '.join(current_logged_location))
@@ -113,12 +114,12 @@ def processData(request):
             last_Logged_device = userData['DeviceType'].values[0].split(",")
             current_logged_device = device_type
             if current_logged_device in last_Logged_device:
-                print("Valid Login -> ", request.values[0]+ "," +' '.join(current_logged_location))
+                produceToAlerts(request.values[0] + ",validLogin" + "," + ' '.join(current_logged_location))
                 updateTimeStamp(user_id, current_logged_time)
             else:
                 produceToAlerts(request.values[0] + ",DeviceTypeAlert/SignInAlert" + "," + ' '.join(current_logged_location))
         else:
-            print("Valid Login -> ", request.values[0]+ "," +' '.join(current_logged_location))
+            produceToAlerts(request.values[0] + ",validLogin" + "," + ' '.join(current_logged_location))
             updateTimeStamp(user_id, current_logged_time)
 
     print("CURRENT CONSUMED COUNT", countConsumed)
