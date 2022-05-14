@@ -42,7 +42,7 @@ https://drive.google.com/file/d/1iVnK2hKXyOK20IumYqTWZPbjnbrM05-X/view?usp=shari
 https://drive.google.com/file/d/1iVnK2hKXyOK20IumYqTWZPbjnbrM05-X/view?usp=sharing
 ```
         
-* Run the below commands in the project directory.
+* Run the below commands in the kafka directory above.
 
 ```bash
 tar -xzf kafka_2.12-3.1.1.tgz
@@ -77,6 +77,7 @@ git clone https://github.com/anujkawane/SuspiciousLoginDetection.git
 * Download data file from bewlo link and paste it to the _*SuspiciousLoginDetection/DataFiles/*_ folder (Github doesnt allow larger files)
 
 ```bash
+https://drive.google.com/file/d/123Qv6h1KweiAN634NBOnDxUdfuTyWDJy/view?usp=sharing
 https://drive.google.com/file/d/123Qv6h1KweiAN634NBOnDxUdfuTyWDJy/view?usp=sharing
 ```
         
