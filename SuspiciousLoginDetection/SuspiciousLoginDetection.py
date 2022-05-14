@@ -4,10 +4,11 @@ from pyspark.sql.functions import col, when
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
 import sys, socket, json, os, time, math, pyspark.pandas as ps
 
-KAFKA_HOST = 'localhost:29092'
+KAFKA_HOST = 'localhost:9092'
 TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
-PATH = '/Users/anujkawane/Desktop/BigDataProject/FruadLoginDetection/DataFiles'
+PATH = os.path.dirname(os.getcwd())+ '/FruadLoginDetection/DataFiles'
+print(PATH)
 AUTO_LOGOUT_TIME_MINUTES = 10
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
@@ -43,8 +44,6 @@ UserLoginStatus = spark.createDataFrame([], schema)
 
 producer = Producer(conf)
 countConsumed = 0
-
-
 
 def updateTimeStamp(userID, current_logged_time):
     global UserLoginStatus
@@ -132,8 +131,6 @@ def processData(request):
             produceToAlerts(requestData)
             updateTimeStamp(user_id, current_logged_time)
 
-    # print("CURRENT CONSUMED COUNT", countConsumed)
-
 
 def convert_string_to_json(row):
     request = json.loads(row)
@@ -153,7 +150,6 @@ def produceToAlerts(message):
     producer.produce(TOPIC_ALERTS, json.dumps(message).encode('utf-8'), callback=acked)
     producer.flush()
     print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(message))
-
 
 def readData(batch_df, batch_id):
     batch = batch_df.to_pandas_on_spark()

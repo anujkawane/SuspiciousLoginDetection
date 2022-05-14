@@ -1,13 +1,12 @@
-import enum, pickle
+import enum, pickle,json
 class ServerLogEnum():
 
-    def __init__(self, eventId, timestamp, currentCountry, currentEventType, accountId):
-        self.eventId = eventId
+    def __init__(self, requestID, timestamp, currentLocation, deviceType, UserID):
+        self.requestID = requestID
         self.timestamp = timestamp
-        self.currentCountry = currentCountry
-        self.currentEventType = currentEventType
-        self.accountId = accountId
-
+        self.currentLocation = currentLocation
+        self.deviceType = deviceType
+        self.UserID = UserID
 
     def serialize(self, obj):
         return pickle.dumps(obj)
@@ -15,9 +14,6 @@ class ServerLogEnum():
     def desearilize(self, serizliedObj):
         return pickle.loads(serizliedObj)
 
-    def returnCommaSeparated(self):
-        return self.eventId + ',' + \
-               self.timestamp + ',' + \
-               self.currentCountry + ',' + \
-               self.currentEventType + ',' + \
-               self.accountId
+    def toJSON(self):
+        data = { "RequestID":str(self.requestID), "UserID":str(self.UserID), "Timestamp":str(self.timestamp), "currentIP":str(self.currentLocation), "DeviceType":str(self.deviceType)}
+        return data
