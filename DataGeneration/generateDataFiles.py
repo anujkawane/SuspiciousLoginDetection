@@ -51,10 +51,10 @@ def generateMainDF():
     # return user_data_df, ip_city_map, deviceTypes
 
 
-    # userDataFile = user_data_df.to_pandas()
-    # userDataFile.to_csv(PATH + '/User_login_history.csv', index=False)
-    #
-    # geoLoc = ip_city_map.to_pandas()
-    # geoLoc.to_csv(PATH+'/IPv4_Location_Mapping.csv', index = False)
+    userDataFile = user_data_df.to_pandas()
+    userDataFile.to_csv(PATH + '/User_login_history.csv', index=False)
+
+    geoLoc = ip_city_map.to_pandas()
+    geoLoc.to_csv(PATH+'/IPv4_Location_Mapping.csv', index = False)
 
 generateMainDF()
