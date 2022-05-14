@@ -64,7 +64,10 @@ bin/kafka-server-start.sh config/server.properties
     
  * Download the project or clone project using below command 
 
-       git clone https://github.com/anujkawane/SuspiciousLoginDetection.git
+```bash
+git clone https://github.com/anujkawane/SuspiciousLoginDetection.git
+```
+       
        
 * Download data file from bewlo link and paste it to the _*SuspiciousLoginDetection/DataFiles/*_ folder (Github doesnt allow larger files)
 
