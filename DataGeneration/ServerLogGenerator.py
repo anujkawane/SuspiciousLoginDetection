@@ -2,7 +2,7 @@ from confluent_kafka import Producer, Consumer, KafkaError, KafkaException
 import socket, uuid, json, random, time, os, math, pyspark.pandas as ps
 from ServerLogEnum import ServerLogEnum
 
-DATA_PATH = os.path.dirname(os.getcwd())+ '/FruadLoginDetection/DataFiles'
+DATA_PATH = os.path.dirname(os.getcwd())+ '/DataFiles'
 KAFKA_HOST = 'localhost:9092'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),

@@ -1,5 +1,4 @@
 import math
-
 from confluent_kafka import Consumer, KafkaError, KafkaException, Producer
 import json, time, socket, sys
 
@@ -27,7 +26,6 @@ def processMessage(msg):
 
     if count == 1:
         started_at = int(processed_data['Timestamp'])
-    print("SINGLE TIME TAKEN",math.ceil(time.time()) - int(processed_data['Timestamp']))
     latency += (math.ceil(time.time()) - int(processed_data['Timestamp']))
     if(processed_data['isLast'] == 'True'):
         totalExecutionDuration =  math.ceil(time.time()) - started_at
