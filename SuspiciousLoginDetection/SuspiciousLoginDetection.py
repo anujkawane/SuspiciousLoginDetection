@@ -7,7 +7,7 @@ import sys, socket, json, os, time, math, pyspark.pandas as ps
 KAFKA_HOST = 'localhost:9092'
 TOPIC_SERVER_LOGS = 'server_logs'
 TOPIC_ALERTS = 'alerts'
-PATH = os.path.dirname(os.getcwd())+ '/FruadLoginDetection/DataFiles'
+PATH = os.path.dirname(os.getcwd())+ '/DataFiles'
 print(PATH)
 AUTO_LOGOUT_TIME_MINUTES = 10
 conf = {'bootstrap.servers': KAFKA_HOST,
