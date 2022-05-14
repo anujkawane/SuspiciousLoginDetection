@@ -48,7 +48,6 @@ def generateMainDF():
 
     user_data_df = ps.DataFrame(np.array(main_data), columns=['UserID', 'Location', 'DeviceType', 'Time'])
 
-    # return user_data_df, ip_city_map, deviceTypes
 
 
     userDataFile = user_data_df.to_pandas()

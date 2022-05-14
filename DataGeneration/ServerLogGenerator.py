@@ -1,6 +1,6 @@
 from confluent_kafka import Producer, Consumer, KafkaError, KafkaException
 import socket, uuid, json, random, time, os, math, pyspark.pandas as ps
-from ServerLogEnum import ServerLogEnum
+from ServerLog import ServerLog
 
 DATA_PATH = os.path.dirname(os.getcwd())+ '/DataFiles'
 KAFKA_HOST = 'localhost:9092'
@@ -17,7 +17,7 @@ TOPIC_SERVER_LOGS = 'server_logs'
 DEVICE_TYPES = ['Android', 'IOS', 'Windows', 'Mac OS', ]
 DATA_LIST = ["GOOD", "BAD"]
 
-NUMBER_OF_LOGS = 10
+NUMBER_OF_LOGS = 30
 
 def getServerLog(choice):
 
@@ -35,7 +35,7 @@ def getServerLog(choice):
         ip = IPv4_Location_Mapping['IP'].iloc[random.randint(0, len(IPv4_Location_Mapping) - 1)]
         device_choice = str(random.choice(DEVICE_TYPES))
 
-    generate_log = ServerLogEnum(curr_uuid,
+    generate_log = ServerLog(curr_uuid,
                              current_time,
                              ip,
                              device_choice,
@@ -60,7 +60,7 @@ def produce():
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)
         producer.flush()
         print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
-        producer.poll(0.5)
+        producer.poll(0.2)
         # print("CURRENT PRODUCED COUNT", i)
     print("FINAL PRODUCED COUNT", i)
 
