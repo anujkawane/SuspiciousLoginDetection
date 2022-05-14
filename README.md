@@ -1,5 +1,14 @@
 # Suspicious Login Detection Pipeline
 
+The main motivation behind this project is to process the logs generated when users login into a website and detect any fraudulent activity if there exists. Consider a website having users with a paid subscription to their service with more than 5 million accounts daily logging into their website. It is important to understand the user’s behavior as several organizations do not want user to share his login details with another person and thereby save a lot of money. With huge amounts of logs generating daily, we need a system fast enough to analyze these logs and take action likewise. Our system aims to process these logs and decide whether it was a suspicious log in the attempt and detect fraud in real time as the logs keep on generating.
+Users committing this fraud can be flagged or issued a warning, in our case we are generating alerts for the same.
+
+
+### Technologies
+1. Apache Kafka
+2. Apache Spark
+3. Python 3.9
+
 ### Prerequisites
 
 Required packages are included in [requirements.txt](https://github.com/anujkawane/SuspiciousLoginDetection/blob/main/requirements.txt) file
