@@ -25,6 +25,7 @@ spark = (SparkSession
 UserDetails = ps.read_csv(PATH + '/User_login_history.csv')
 IPv4_Location_Mapping = ps.read_csv(PATH + '/IPv4_Location_Mapping.csv')
 
+# Add purpose of this DF
 df = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", KAFKA_HOST) \
@@ -105,7 +106,7 @@ def processData(request):
                 produceToAlerts(requestData)
                 updateTimeStamp(user_id, current_logged_time)
             else:
-                requestData['Alert'] = 'DeviceAlert'
+                requestData['Alert'] = 'NewDeviceSignIn'
                 requestData['currentLocation'] = current_logged_location
                 produceToAlerts(requestData)
         else:
@@ -123,7 +124,7 @@ def processData(request):
                 produceToAlerts(requestData)
                 updateTimeStamp(user_id, current_logged_time)
             else:
-                requestData['Alert'] = 'DeviceTypeAlert/SignInAlert'
+                requestData['Alert'] = 'NewDeviceSignIn/SignInAlert'
                 requestData['currentLocation'] = current_logged_location
                 produceToAlerts(requestData)
         else:

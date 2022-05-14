@@ -1,5 +1,7 @@
 import enum, pickle,json
-class ServerLogEnum():
+
+# Used to map server logs to JSON
+class ServerLog():
 
     def __init__(self, requestID, timestamp, currentLocation, deviceType, UserID):
         self.requestID = requestID

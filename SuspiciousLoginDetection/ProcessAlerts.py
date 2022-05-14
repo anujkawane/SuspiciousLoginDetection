@@ -29,9 +29,8 @@ def processMessage(msg):
     latency += (math.ceil(time.time()) - int(processed_data['Timestamp']))
     if(processed_data['isLast'] == 'True'):
         totalExecutionDuration =  math.ceil(time.time()) - started_at
-        print("TOTAL COUNT", count)
-        print('Throughput of the pipeline is', totalExecutionDuration/count,' requests/second')
-        print('Average Latency', latency / count)
+        print('Throughput of the pipeline = ', totalExecutionDuration/count,' requests/sec')
+        print('Latency', int(latency / count))
 
     if(processed_data['Alert'] != "No"):
        print(printMessage(processed_data))
