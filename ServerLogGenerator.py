@@ -7,7 +7,7 @@ KAFKA_HOST = 'localhost:29092'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
         'group.id': "FraudLoginDetection",
-        'auto.offset.reset': 'latest'}
+        'auto.offset.reset': 'smallest'}
 
 User_Login_History = ps.read_csv(DATA_PATH + '/User_login_history.csv')
 IPv4_Location_Mapping = ps.read_csv(DATA_PATH + '/IPv4_Location_Mapping.csv')
@@ -17,7 +17,7 @@ TOPIC_SERVER_LOGS = 'server_logs'
 DEVICE_TYPES = ['Android', 'IOS', 'Windows', 'Mac OS', ]
 DATA_LIST = ["GOOD", "BAD"]
 
-NUMBER_OF_LOGS = 1000
+NUMBER_OF_LOGS = 10
 
 def getServerLog(choice):
 
@@ -40,7 +40,7 @@ def getServerLog(choice):
                              ip,
                              device_choice,
                              user_id)
-    return generate_log.returnCommaSeparated()
+    return generate_log.toJSON()
 
 def acked(err, msg):
     if err is not None:
@@ -50,19 +50,18 @@ def acked(err, msg):
 
 def produce():
     producer = Producer(conf)
-    is_Last_message = 'False'
     for i in range(NUMBER_OF_LOGS):
         choice = random.choices(DATA_LIST, weights=(80, 20))
         data = getServerLog(choice[0])
         if(i == NUMBER_OF_LOGS-1):
-            data =  data + ','+ 'True'
+            data['isLast'] = 'True'
         else:
-            data = data + ","+ is_Last_message
+            data['isLast'] = 'False'
         producer.produce(TOPIC_SERVER_LOGS, json.dumps(data).encode('utf-8'), callback=acked)
         producer.flush()
         print("\033[1;31;40m -- PRODUCER: Sent message with id {}".format(data))
         producer.poll(0.5)
-        print("CURRENT PRODUCED COUNT", i)
+        # print("CURRENT PRODUCED COUNT", i)
     print("FINAL PRODUCED COUNT", i)
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ TOPIC_ALERTS = 'alerts'
 conf = {'bootstrap.servers': KAFKA_HOST,
         'client.id': socket.gethostname(),
         'group.id': 'FraudLoginDetection',
-        'auto.offset.reset': 'earliest'}   # latest, earliest
+        'auto.offset.reset': 'smallest'}   # latest, earliest
 
 consumer = Consumer(conf)
 
@@ -32,8 +32,8 @@ def msg_process(msg):
         print('Throughput of the pipeline is', count / totalExecutionDuration,' requests/second')
         print('Average Latency', latency / count)
 
-    if(alert_log[6] != "validLogin"):
-       print(printMessage(alert_log))
+    # if(alert_log[6] != "validLogin"):
+    #    print(printMessage(alert_log))
 
 
 def printMessage(alert_log):
